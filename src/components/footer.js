@@ -57,7 +57,7 @@ const Footer = () => {
 									</a>
 								</li>
 								<li>
-									<Link href="/" className="nocolor">
+									<Link to="/" className="nocolor">
 										Contact Us
 									</Link>
 								</li>
@@ -91,14 +91,14 @@ const Footer = () => {
 											placeholder="Email Address"
 											required
 										/>
-										<Link
+										<button
 											type="submit"
 											name="subscribe"
 											id="mc-embedded-subscribe"
 											className="btn btn-default mr-0 mb-0 pull-right"
 										>
 											Join
-										</Link>
+										</button>
 									</div>
 								</form>
 							</div>

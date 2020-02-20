@@ -1410,11 +1410,11 @@ video::-webkit-media-controls {
 /*	16. SHADOW
 /*-----------------------------------------------------------------------------------*/
 .shadow {
-	box-shadow: var(--shadow) !important;
+	box-shadow: 0 0.5rem 0.5rem rgb(161, 161, 161, 0.15) !important;
 	transition: all 200ms ease-in-out;
 }
 .shadow-hover:hover {
-	box-shadow: var(--shadow-hover) !important;
+	box-shadow: 0 0rem 0rem rgb(161, 161, 161, 0.15) !important;
 }
 .no-shadow {
 	box-shadow: none !important;
