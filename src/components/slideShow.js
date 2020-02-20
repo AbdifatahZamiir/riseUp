@@ -1,5 +1,5 @@
 import React from "react";
-import Concept21 from "../images/concept/concept21.png";
+import Concept21 from "../images/concept/concept2.png";
 
 const SlideShow = () => {
 	return (

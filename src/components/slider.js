@@ -13,19 +13,11 @@ const Slider = () => {
 	return (
 		<div>
 			<div className="container inner pb-5">
-				<h3 className="display-5 text-center mb-5 ">
+				<h3 className="text-center mb-5 ">
 					We are creative company that values quality not quantity and focuses
 					on establishing long-term relationships with clients.
 				</h3>
-				<div
-					className="carousel owl-carousel clients mt-4 mb-4"
-					data-margin="30"
-					data-loop="true"
-					data-dots="false"
-					data-autoplay="true"
-					data-autoplay-timeout="3000"
-					data-responsive='{"0":{"items": "2"}, "768":{"items": "4"}, "992":{"items": "5"}, "1140":{"items": "6"}}'
-				>
+				<div className="carousel owl-carousel clients ">
 					<Carousel>
 						<Carousel.Item className="text-center">
 							<span className="item pl-5 pr-5">
@@ -40,6 +32,7 @@ const Slider = () => {
 							<span className="item pl-5 pr-5">
 								<img src={Z6} alt="" style={{ width: `150px` }} />
 							</span>
+							<Carousel.Caption></Carousel.Caption>
 						</Carousel.Item>
 						<Carousel.Item className="text-center">
 							<span className="item pl-5 pr-5">
@@ -56,6 +49,7 @@ const Slider = () => {
 							<span className="item pl-5 pr-5">
 								<img src={Z5} alt="" style={{ width: `150px` }} />
 							</span>
+							<Carousel.Caption></Carousel.Caption>
 						</Carousel.Item>
 					</Carousel>
 				</div>
