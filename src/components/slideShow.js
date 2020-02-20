@@ -1,22 +1,26 @@
 import React from "react";
 import Concept21 from "../images/concept/concept21.png";
+
 const SlideShow = () => {
 	return (
-		<div className="wrapper bg-opacity-default">
-			<div className="rev_slider_wrapper fullwidth-container dark-spinner dark-nav">
-				<div
-					id="slider11"
-					className="rev_slider fullwidthbanner row"
-					data-version="5.4.7"
-				>
-					<div className="col-lg-6">
-						{/* Crafting effective and project specific solutions with expertise. */}
+		<div className="wrapper white-wrapper img-back">
+			<div className="container rev_slider_wrapper fullwidth-container dark-spinner dark-nav">
+				<div id="slider16" className="row rev_slider fullwidthbanner">
+					<div className="col-lg-6 col-md-6 col-sm-6 heading-con">
+						<div className="heading-one color-dark mt-3">
+							We bring rapid solutions for your business needs
+						</div>
+						<div className="heading-two color-dark mt-3 mb-4">
+							We have considered our solutions to support every stage of your
+							growth.
+						</div>
+						<a className="btn btn-l btn-default animated-btn" href="/">
+							Learn More
+						</a>
 					</div>
-					<div className="col-lg-6">
-						<img src={Concept21} alt="" style={{ width: `550px` }} />
+					<div className="col-md-6 col-lg-6 col-sm-6 r-pic">
+						<img className="size-pic" src={Concept21} alt="" />
 					</div>
-
-					<div className="tp-bannertimer tp-bottom"></div>
 				</div>
 			</div>
 		</div>

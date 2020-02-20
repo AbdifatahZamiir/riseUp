@@ -3,6 +3,7 @@ import "../styles/bootstrap.min.css";
 import "../styles/style.css";
 import "../styles/purple.css";
 import Logo from "../images/logo.png";
+import { Link } from "gatsby";
 
 const Footer = () => {
 	return (
@@ -56,9 +57,9 @@ const Footer = () => {
 									</a>
 								</li>
 								<li>
-									<a href="/" className="nocolor">
+									<Link href="/" className="nocolor">
 										Contact Us
-									</a>
+									</Link>
 								</li>
 							</ul>
 						</div>
@@ -90,14 +91,14 @@ const Footer = () => {
 											placeholder="Email Address"
 											required
 										/>
-										<button
+										<Link
 											type="submit"
 											name="subscribe"
 											id="mc-embedded-subscribe"
-											className="btn btn-rounded btn-default mr-0 mb-0 pull-right"
+											className="btn btn-default mr-0 mb-0 pull-right"
 										>
 											Join
-										</button>
+										</Link>
 									</div>
 								</form>
 							</div>

@@ -98,8 +98,8 @@ class Header extends Component {
 											letterSpacing: `0.5px`,
 											lineHeight: `20px`,
 											opacity: `1`,
-											padding: `0px 15px`,
-											marginTop: `20px`
+											padding: `0px 20px`,
+											marginTop: `15px`
 										}}
 										to="/"
 									>
@@ -118,8 +118,8 @@ class Header extends Component {
 											letterSpacing: `0.5px`,
 											lineHeight: `20px`,
 											opacity: `1`,
-											padding: `0px 15px`,
-											marginTop: `20px`
+											padding: `0px 20px`,
+											marginTop: `15px`
 										}}
 										to="/about"
 									>
@@ -139,33 +139,16 @@ class Header extends Component {
 											letterSpacing: `0.5px`,
 											lineHeight: `20px`,
 											opacity: `1`,
-											padding: `0px 15px`,
-											marginTop: `20px`
+											padding: `0px 20px`,
+											marginTop: `15px`
 										}}
 										to="/newspage"
 									>
 										Events
 									</Link>
 								</li>
-								<li className="nav-item btn btn-rounded ">
-									<Link
-										className="nav-link "
-										style={{
-											boxShadow: `none`,
-											textDecoration: `none`,
-											fontFamily: `Jost, sans-serif`,
-											fontSize: `.9em`,
-											fontWeight: `500`,
-											color: `#fff`,
-											letterSpacing: `0.5px`,
-											lineHeight: `20px`,
-											opacity: `1`,
-											padding: `0px 15px`,
-											// marginBottom: `8px`,
-											marginTop: `0px`
-										}}
-										to="/contact"
-									>
+								<li className="nav-item" style={{}}>
+									<Link className="nav-link btn btn-default" to="/contact">
 										Contact Us
 									</Link>
 								</li>
