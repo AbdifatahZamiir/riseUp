@@ -1,5 +1,5 @@
 import React from "react";
-import About3 from "../images/art/about7.png";
+import About3 from "../images/concept/concept22.png";
 const About = () => {
 	return (
 		<div className="wrapper white-wrapper">
@@ -13,7 +13,7 @@ const About = () => {
 							<div
 								className="row counter counter-s position-absolute"
 								// style="top: 45%; right: 8%;"
-								style={{ top: `45%`, right: `8%` }}
+								style={{ top: `57%`, right: `23%` }}
 							>
 								<div className="col-md-10 text-center">
 									<div className="box bg-white shadow">
@@ -22,7 +22,7 @@ const About = () => {
 										</h3>
 										<p>
 											Successful <br className="d-md-none" />
-											StartUps
+											Start Ups
 										</p>
 									</div>
 								</div>

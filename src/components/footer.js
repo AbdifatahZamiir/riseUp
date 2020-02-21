@@ -86,7 +86,7 @@ const Footer = () => {
 										<input
 											type="email"
 											name="EMAIL"
-											className="email form-control mb-0 mr-2 mb-sm-0"
+											className="email subscribe-input  form-control mb-0 mr-2 mb-sm-0"
 											id="mce-EMAIL"
 											placeholder="Email Address"
 											required

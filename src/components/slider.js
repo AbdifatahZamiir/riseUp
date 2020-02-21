@@ -18,7 +18,7 @@ const Slider = () => {
 					on establishing long-term relationships with clients.
 				</h3>
 				<div className="carousel owl-carousel clients ">
-					<Carousel>
+					<Carousel className="row">
 						<Carousel.Item className="text-center">
 							<span className="item pl-5 pr-5">
 								<img src={Z1} alt="" style={{ width: `150px` }} />

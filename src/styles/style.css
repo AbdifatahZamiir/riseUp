@@ -75,6 +75,9 @@ li,
 address {
 	line-height: 1.4rem;
 }
+.subscribe-input {
+	background: #464343 !important;
+}
 input,
 button,
 select,
@@ -2947,6 +2950,7 @@ ul.dial li:first-child .dial-item-info {
 	line-height: 1;
 	font-weight: 400;
 	margin-bottom: 0.6rem;
+	color: #fff;
 }
 .counter p {
 	font-size: 0.8rem;
@@ -2954,6 +2958,8 @@ ul.dial li:first-child .dial-item-info {
 	line-height: 1.1rem;
 }
 .counter .box {
+	color: #fff;
+	background-color: rgb(248, 202, 51) !important;
 	padding: 1.5rem;
 }
 .counter-s h3 {
@@ -4592,7 +4598,6 @@ input[type="color"],
 	padding: 0 1rem;
 	font-size: 0.8rem;
 	color: #949191;
-	background: #464343 !important;
 	border: 0;
 	border-radius: 1.25rem;
 	resize: none;
@@ -4713,7 +4718,7 @@ textarea.error {
 	margin: 0;
 	padding-right: 1rem !important;
 }
-.search-form:before {
+/* .search-form:before {
 	content: "\ebab";
 	font-family: "Jam";
 	display: block;
@@ -4722,7 +4727,7 @@ textarea.error {
 	right: 0.75rem;
 	font-size: 0.85rem;
 	color: #606060;
-}
+} */
 .custom-select {
 	height: 2.5rem;
 	background: rgba(var(--rgb-black), 0.05);

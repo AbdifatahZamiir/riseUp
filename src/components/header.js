@@ -142,7 +142,7 @@ class Header extends Component {
 											padding: `0px 20px`,
 											marginTop: `15px`
 										}}
-										to="/newspage"
+										to="/events"
 									>
 										Events
 									</Link>
