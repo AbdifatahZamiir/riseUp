@@ -6984,8 +6984,20 @@ footer.inverse-text address {
 .top-image {
 	background-image: linear-gradient(
 			to right bottom,
-			rgba(35, 48, 35, 0.8),
-			rgba(14, 24, 21, 0.8)
+			rgba(79, 90, 79, 0.8),
+			rgba(64, 73, 70, 0.8)
 		),
-		url("../images//mylogo.jpg");
+		url("../images/mylogo.jpg");
+}
+
+.pro-img {
+	max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    margin-bottom: 1.75rem;
 }

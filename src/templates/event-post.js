@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import Layout from "../components/layout";
 import Img from "gatsby-image";
 import Popular from "../components/popularPost";
+import { graphql } from "gatsby";
 
 const EventTemplate = ({ data }) => {
 	return (
@@ -17,7 +18,7 @@ const EventTemplate = ({ data }) => {
 						<div className="col-lg-8">
 							<div className="blog grid grid-view">
 								<div className="row isotope">
-									<div className="item post grid-sizer col-md-8 col-lg-8">
+									<div className="item post grid-sizer col-md-8 col-lg-12">
 										<figure className="overlay overlay1 rounded mb-3">
 											{!!data.frontmatter.featuredImg &&
 											!!data.frontmatter.featuredImg.childImageSharp ? (

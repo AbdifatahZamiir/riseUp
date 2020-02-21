@@ -147,6 +147,26 @@ class Header extends Component {
 										Events
 									</Link>
 								</li>
+								<li className="nav-item">
+									<Link
+										className="nav-link"
+										style={{
+											boxShadow: `none`,
+											textDecoration: `none`,
+											fontFamily: `Jost, sans-serif`,
+											fontSize: `.9em`,
+											fontWeight: `500`,
+											letterSpacing: `0.5px`,
+											lineHeight: `20px`,
+											opacity: `1`,
+											padding: `0px 20px`,
+											marginTop: `15px`
+										}}
+										to="/programs"
+									>
+										Programs
+									</Link>
+								</li>
 								<li className="nav-item  ml-2">
 									<Link className="nav-link btn btn-default" to="/contact">
 										Contact Us

@@ -9,6 +9,44 @@ import Popular from "../components/popularPost";
 const Event = props => {
 	const { data } = props;
 	const allPosts = data.allMarkdownRemark.edges;
+
+	const emptyQuery = "";
+
+	const [state, setState] = React.useState({
+		filteredData: [],
+		query: emptyQuery
+	});
+
+	const handleInputChange = event => {
+		const query = event.target.value;
+		const { data } = props;
+
+		const posts = data.allMarkdownRemark.edges || [];
+
+		const filteredData = posts.filter(post => {
+			const { description, title, tag, publishedDate } = post.node.frontmatter;
+			const { slug } = post.node.fields;
+			const { id } = post.node;
+			return (
+				description.toLowerCase().includes(query.toLowerCase()) ||
+				title.toLowerCase().includes(query.toLowerCase()) ||
+				slug.toLowerCase().includes(query.toLowerCase()) ||
+				id.toLowerCase().includes(query.toLowerCase()) ||
+				tag.toLowerCase().includes(query.toLowerCase()) ||
+				publishedDate.toLowerCase().includes(query.toLowerCase())
+			);
+		});
+
+		setState({
+			query,
+			filteredData
+		});
+	};
+
+	const { filteredData, query } = state;
+	const hasSearchResults = filteredData && query !== emptyQuery;
+	const posts = hasSearchResults ? filteredData : allPosts;
+
 	return (
 		<Layout>
 			<div className="top-image wrapper image-wrapper bg-image page-title-wrapper inverse-text">
@@ -22,7 +60,7 @@ const Event = props => {
 						<div className="col-lg-8">
 							<div className="blog grid grid-view">
 								<div className="row isotope">
-									{allPosts.map(({ node }) => {
+									{posts.map(({ node }) => {
 										const { id } = node;
 										const { slug } = node.fields;
 										const {
@@ -95,6 +133,7 @@ const Event = props => {
 										style={{ backgroundColor: `#fff`, paddingLeft: `2rem` }}
 										type="text"
 										placeholder="Search something"
+										onChange={handleInputChange}
 									/>
 								</div>
 							</div>
