@@ -1,5 +1,4 @@
 import React from "react";
-import TitleImg from "../images//mylogo.jpg";
 import Telephone from "../images/icons/co-telephone.png";
 import Email from "../images/icons/co-email-5.png";
 import Gps from "../images/icons/ui-gps.png";
@@ -9,14 +8,7 @@ import Layout from "../components/layout";
 const Contact = () => {
 	return (
 		<Layout>
-			<div
-				className="wrapper image-wrapper bg-image page-title-wrapper inverse-text"
-				style={{
-					backgroundImage: `url(${TitleImg})`,
-					backgroundSize: `cover`,
-					backgroundPosition: `bottom`
-				}}
-			>
+			<div className="top-image wrapper image-wrapper bg-image page-title-wrapper inverse-text">
 				<div className="container inner text-center">
 					<h1 className="page-title text-white">Contact Us</h1>
 				</div>
@@ -82,6 +74,7 @@ const Contact = () => {
 										<div className="col-md-6">
 											<div className="form-group">
 												<input
+													style={{ backgroundColor: `#fff` }}
 													id="form_name"
 													type="text"
 													name="name"
@@ -96,6 +89,7 @@ const Contact = () => {
 										<div className="col-md-6">
 											<div className="form-group">
 												<input
+													style={{ backgroundColor: `#fff` }}
 													id="form_lastname"
 													type="text"
 													name="surname"
@@ -112,6 +106,7 @@ const Contact = () => {
 										<div className="col-md-6">
 											<div className="form-group">
 												<input
+													style={{ backgroundColor: `#fff` }}
 													id="form_email"
 													type="email"
 													name="email"
@@ -126,6 +121,7 @@ const Contact = () => {
 										<div className="col-md-6">
 											<div className="form-group">
 												<input
+													style={{ backgroundColor: `#fff` }}
 													id="form_phone"
 													type="tel"
 													name="phone"
@@ -141,6 +137,7 @@ const Contact = () => {
 											<div className="form-group">
 												<textarea
 													id="form_message"
+													style={{ backgroundColor: `#fff` }}
 													name="message"
 													className="form-control"
 													placeholder="Message *"

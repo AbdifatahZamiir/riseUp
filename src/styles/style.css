@@ -5210,7 +5210,7 @@ pre {
 .bg-orange {
 	background: var(--color-orange);
 }
-.bg-yellow {
+/* .bg-yellow {
 	background: var(--color-yellow);
 }
 .bg-green {
@@ -5224,37 +5224,37 @@ pre {
 }
 .bg-aqua {
 	background: var(--color-aqua);
-}
+} */
 .bg-meander {
-	background: var(--color-meander);
+	background: yellow;
 }
-.bg-blue {
-	background: var(--color-blue);
+/* .bg-blue {
+	background: blue;
 }
 .bg-cobalt {
-	background: var(--color-cobalt);
+	background: red;
 }
 .bg-sky {
-	background: var(--color-sky);
+	background: skyblue;
 }
 .bg-purple {
-	background: var(--color-purple);
+	background: rgb(42, 230, 236);
 }
 .bg-violet {
-	background: var(--color-violet);
+	background: violet;
 }
 .bg-pink {
-	background: var(--color-pink);
+	background: pink;
 }
 .bg-rose {
-	background: var(--color-rose);
+	background: rosybrown;
 }
 .bg-hibiscus {
-	background: var(--color-hibiscus);
+	background: 🌺;
 }
 .bg-brown {
-	background: var(--color-brown);
-}
+	background: brown;
+} */
 .title-bg.bg-default {
 	background: rgba(var(--rgb-default), 0.15);
 }
@@ -6968,4 +6968,24 @@ footer.inverse-text address {
 		opacity: 1;
 		transform: translate(0);
 	}
+}
+/* search form*/
+.has-search .form-control-feedback {
+	position: absolute;
+	z-index: 2;
+	display: block;
+	width: 2.375rem;
+	height: 2.375rem;
+	line-height: 2.375rem;
+	text-align: center;
+	pointer-events: none;
+}
+/*top image*/
+.top-image {
+	background-image: linear-gradient(
+			to right bottom,
+			rgba(35, 48, 35, 0.8),
+			rgba(14, 24, 21, 0.8)
+		),
+		url("../images//mylogo.jpg");
 }

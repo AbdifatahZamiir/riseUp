@@ -127,7 +127,7 @@ class Header extends Component {
 									</Link>
 								</li>
 
-								<li className="nav-item ">
+								<li className="nav-item">
 									<Link
 										className="nav-link"
 										style={{
@@ -147,7 +147,7 @@ class Header extends Component {
 										Events
 									</Link>
 								</li>
-								<li className="nav-item" style={{}}>
+								<li className="nav-item  ml-2">
 									<Link className="nav-link btn btn-default" to="/contact">
 										Contact Us
 									</Link>
