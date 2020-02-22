@@ -44,12 +44,12 @@ module.exports = {
 			}
 		},
 
-		// {
-		// 	resolve: `gatsby-plugin-google-analytics`,
-		// 	options: {
-		//trackingId: `ADD YOUR TRACKING ID HERE`,
-		// 	}
-		// },
+		{
+			resolve: `gatsby-plugin-google-analytics`,
+			options: {
+				trackingId: `ADD YOUR TRACKING ID HERE`
+			}
+		},
 		// `gatsby-plugin-feed`,
 		{
 			resolve: `gatsby-plugin-manifest`,
@@ -70,6 +70,6 @@ module.exports = {
 				pathToConfigModule: `src/utils/typography`
 			}
 		} // To learn more, visit: https://gatsby.dev/offline // this (optional) plugin enables Progressive Web App + Offline functionality
-		`gatsby-plugin-offline`
+		// `gatsby-plugin-offline`
 	]
 };
