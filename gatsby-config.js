@@ -70,6 +70,5 @@ module.exports = {
 				pathToConfigModule: `src/utils/typography`
 			}
 		} // To learn more, visit: https://gatsby.dev/offline // this (optional) plugin enables Progressive Web App + Offline functionality
-		// `gatsby-plugin-offline`
 	]
 };
