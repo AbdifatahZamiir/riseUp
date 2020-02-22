@@ -40,7 +40,7 @@ const Footer = () => {
 								<li>
 									<Link
 										style={{ textDecoration: `none` }}
-										href="/about"
+										to="/about"
 										className="nocolor"
 									>
 										About Us
