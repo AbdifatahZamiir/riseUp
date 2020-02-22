@@ -1,9 +1,35 @@
 import React from "react";
-import Te1 from "../images/art/te1.jpg";
-import Te2 from "../images/art/te2.jpg";
-import Te3 from "../images/art/te3.jpg";
+import { useStaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
 
 const Team = () => {
+	const allPosts = useStaticQuery(graphql`
+		query {
+			allMarkdownRemark(
+				filter: { frontmatter: { templateKey: { eq: "teams" } } }
+			) {
+				edges {
+					node {
+						id
+						frontmatter {
+							title
+							status
+							description
+							featuredImg {
+								childImageSharp {
+									fluid(maxWidth: 800) {
+										...GatsbyImageSharpFluid
+									}
+								}
+								publicURL
+							}
+						}
+					}
+				}
+			}
+		}
+	`);
+
 	return (
 		<div className="wrapper light-wrapper">
 			<div className="container inner">
@@ -13,48 +39,36 @@ const Team = () => {
 				</p>
 				<div className="grid-view">
 					<div className="row  gap-small text-center">
-						<div className="item col-lg-4 col-md-4 col-sm-6">
-							<div className="item-inner">
-								<div className="box bg-white shadow">
-									<div className="img-blob blob1 mb-20">
-										<img src={Te1} style={{ width: `7rem` }} alt="" />
+						{allPosts.allMarkdownRemark.edges.map(({ node }) => {
+							const { id } = node;
+							const {
+								featuredImg,
+								title,
+								description,
+								status
+							} = node.frontmatter;
+							return (
+								<div className="item col-lg-4 col-md-4 col-sm-6" key={id}>
+									<div className="item-inner">
+										<div className="box bg-white shadow">
+											<div className="img-blob blob1 mb-4">
+												{!!featuredImg && !!featuredImg.childImageSharp ? (
+													<Img
+														fluid={featuredImg.childImageSharp.fluid}
+														alt={title}
+													/>
+												) : (
+													<img src={featuredImg.publicURL} alt={title} />
+												)}{" "}
+											</div>
+											<h5 className="mb-15">{title}</h5>
+											<div className="meta mb-10">{status}</div>
+											<p className="mb-10">{description} </p>
+										</div>
 									</div>
-									<h5 className="mb-15">Connor Gibson</h5>
-									<div className="meta mb-10">Financial Analyst</div>
-									<p className="mb-10">
-										Pellentesque ornare sem lacinia quam venenatis.
-									</p>
 								</div>
-							</div>
-						</div>
-						<div className="item col-lg-4 col-md-4 col-sm-6">
-							<div className="item-inner">
-								<div className="box bg-white shadow">
-									<div className="img-blob blob1 mb-20">
-										<img src={Te2} style={{ width: `7rem` }} alt="" />
-									</div>
-									<h5 className="mb-15">Coriss Ambady</h5>
-									<div className="meta mb-10">Marketing Specialist</div>
-									<p className="mb-10">
-										Pellentesque ornare sem lacinia quam venenatis.
-									</p>
-								</div>
-							</div>
-						</div>
-						<div className="item col-lg-4 col-md-4 col-sm-6">
-							<div className="item-inner">
-								<div className="box bg-white shadow">
-									<div className="img-blob blob1 mb-20">
-										<img src={Te3} style={{ width: `7rem` }} alt="" />
-									</div>
-									<h5 className="mb-15">Barclay Widerski</h5>
-									<div className="meta mb-10">Sales Manager</div>
-									<p className="mb-10">
-										Pellentesque ornare sem lacinia quam venenatis.
-									</p>
-								</div>
-							</div>
-						</div>
+							);
+						})}
 					</div>
 				</div>
 			</div>

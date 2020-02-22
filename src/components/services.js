@@ -2,7 +2,7 @@ import React from "react";
 import Img from "gatsby-image";
 import { useStaticQuery, graphql } from "gatsby";
 
-const Service = () => {
+const Service = ({ serviceTitle }) => {
 	const services = useStaticQuery(graphql`
 		query {
 			allMarkdownRemark(
@@ -32,9 +32,7 @@ const Service = () => {
 	return (
 		<div className="container mb-4">
 			<h3 className="display-3 text-center mt-4 mb-4">
-				The full service we are offering is specifically{" "}
-				<br className="d-none d-lg-block" />
-				designed to meet your business needs.
+				{serviceTitle} <br className="d-none d-lg-block" />
 			</h3>
 			<div className="row text-center">
 				{services.allMarkdownRemark.edges.map(({ node }) => {

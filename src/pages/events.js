@@ -5,6 +5,7 @@ import Img from "gatsby-image";
 import { FaClock, FaSearch } from "react-icons/fa";
 import Layout from "../components/layout";
 import Popular from "../components/popularPost";
+import Head from "../components/Head";
 
 const Event = props => {
 	const { data } = props;
@@ -49,6 +50,7 @@ const Event = props => {
 
 	return (
 		<Layout>
+			<Head title="Events" />
 			<div className="top-image wrapper image-wrapper bg-image page-title-wrapper inverse-text">
 				<div className="container inner text-center">
 					<h1 className="page-title text-white">Events</h1>

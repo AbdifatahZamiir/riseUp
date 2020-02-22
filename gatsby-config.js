@@ -1,7 +1,8 @@
 module.exports = {
 	siteMetadata: {
-		title: `Rise Up Web`,
-		description: `Rise up website .`
+		title: `Rise Up Unleashing Ideas`,
+		description: `Rise up website .`,
+		myWebUrl: `riseup.com`
 	},
 	plugins: [
 		`gatsby-plugin-sharp`,
@@ -43,12 +44,12 @@ module.exports = {
 			}
 		},
 
-		{
-			resolve: `gatsby-plugin-google-analytics`,
-			options: {
-				//trackingId: `ADD YOUR TRACKING ID HERE`,
-			}
-		},
+		// {
+		// 	resolve: `gatsby-plugin-google-analytics`,
+		// 	options: {
+		//trackingId: `ADD YOUR TRACKING ID HERE`,
+		// 	}
+		// },
 		// `gatsby-plugin-feed`,
 		{
 			resolve: `gatsby-plugin-manifest`,
@@ -59,7 +60,7 @@ module.exports = {
 				background_color: `#ffffff`,
 				theme_color: `#663399`,
 				display: `minimal-ui`,
-				icon: `content/assets/gatsby-icon.png`
+				icon: `content/assets/logo.png`
 			}
 		},
 		`gatsby-plugin-react-helmet`,
@@ -68,9 +69,7 @@ module.exports = {
 			options: {
 				pathToConfigModule: `src/utils/typography`
 			}
-		}
-		// this (optional) plugin enables Progressive Web App + Offline functionality
-		// To learn more, visit: https://gatsby.dev/offline
-		// `gatsby-plugin-offline`,
+		} // To learn more, visit: https://gatsby.dev/offline // this (optional) plugin enables Progressive Web App + Offline functionality
+		`gatsby-plugin-offline`
 	]
 };

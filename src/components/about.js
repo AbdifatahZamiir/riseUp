@@ -1,6 +1,26 @@
 import React from "react";
 import About3 from "../images/concept/concept22.png";
+import { useStaticQuery, graphql } from "gatsby";
+
 const About = () => {
+	const allPosts = useStaticQuery(graphql`
+		query {
+			allMarkdownRemark(
+				filter: { frontmatter: { templateKey: { eq: "about-page" } } }
+			) {
+				edges {
+					node {
+						id
+						frontmatter {
+							mainTitle
+							subTitle
+							subTitleTwo
+						}
+					}
+				}
+			}
+		}
+	`);
 	return (
 		<div className="wrapper white-wrapper">
 			<div className="container inner">
@@ -30,27 +50,19 @@ const About = () => {
 						</div>
 					</div>
 					<div className="space30 d-none d-md-block d-lg-none"></div>
-					<div className="col-lg-6 pr-60 pr-md-15">
-						<h2 className="title-color color-gray">About Us</h2>
-						<h3 className="display-3">
-							We are a creative company that focuses on establishing long-term
-							relationships with customers.
-						</h3>
-						<div className="space10"></div>
-						<p>
-							Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis
-							natoque penatibus et magnis dis parturient montes, nascetur
-							ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia
-							quam venenatis vestibulum. Aenean lacinia bibendum nulla sed
-							consectetur.
-						</p>
-						<p>
-							Cras mattis consectetur purus sit amet fermentum. Maecenas sed
-							diam eget risus varius blandit sit amet non magna. Cras justo
-							odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor
-							id nibh.
-						</p>
-					</div>
+					{allPosts.allMarkdownRemark.edges.map(({ node }) => {
+						const { id } = node;
+						const { subTitle, subTitleTwo, mainTitle } = node.frontmatter;
+						return (
+							<div className="col-lg-6 pr-60 pr-md-15" key={id}>
+								<h2 className="title-color color-gray">About Us</h2>
+								<h3 className="display-3">{mainTitle}</h3>
+								<div className="space10"></div>
+								<p>{subTitle}</p>
+								<p>{subTitleTwo}</p>
+							</div>
+						);
+					})}
 				</div>
 			</div>
 		</div>

@@ -3,13 +3,15 @@ import Layout from "../components/layout";
 import Img from "gatsby-image";
 import Popular from "../components/popularPost";
 import { graphql } from "gatsby";
+import Head from "../components/Head";
 
 const EventTemplate = ({ data }) => {
 	return (
 		<Fragment>
+			<Head title={data.frontmatter.title} />
 			<div className="top-image wrapper image-wrapper bg-image page-title-wrapper inverse-text">
 				<div className="container inner text-center">
-					<h1 className="page-title text-white">Events Detail</h1>
+					<h1 className="page-title text-white">Event Detail</h1>
 				</div>
 			</div>
 			<div className="wrapper light-wrapper">
@@ -42,9 +44,7 @@ const EventTemplate = ({ data }) => {
 												{data.frontmatter.tag}
 											</a>
 										</div>
-										<h2 className="post-title">
-											<a href="blog-post.html">{data.frontmatter.title}</a>
-										</h2>
+										<h2 className="post-title">{data.frontmatter.title}</h2>
 										<div dangerouslySetInnerHTML={{ __html: data.html }} />
 									</div>
 								</div>

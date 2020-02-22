@@ -2,7 +2,7 @@ import React from "react";
 import Img from "gatsby-image";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
-import Slider from "../components/slider";
+import Head from "../components/Head";
 
 const Services = props => {
 	const { data } = props;
@@ -10,6 +10,7 @@ const Services = props => {
 
 	return (
 		<Layout>
+			<Head title="Programs" />
 			<div className="top-image wrapper image-wrapper bg-image page-title-wrapper inverse-text">
 				<div className="container inner text-center">
 					<h1 className="page-title text-white">Programs</h1>
@@ -57,7 +58,6 @@ const Services = props => {
 					})}
 				</div>
 			</div>
-			<Slider />
 		</Layout>
 	);
 };

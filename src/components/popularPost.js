@@ -20,8 +20,6 @@ const Popular = () => {
 						frontmatter {
 							title
 							publishedDate
-							tag
-							description
 							featuredImg {
 								childImageSharp {
 									fluid(maxWidth: 800) {

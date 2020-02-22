@@ -4,10 +4,12 @@ import Email from "../images/icons/co-email-5.png";
 import Gps from "../images/icons/ui-gps.png";
 
 import Layout from "../components/layout";
+import Head from "../components/Head";
 
 const Contact = () => {
 	return (
 		<Layout>
+			<Head title="Contact Us" />
 			<div className="top-image wrapper image-wrapper bg-image page-title-wrapper inverse-text">
 				<div className="container inner text-center">
 					<h1 className="page-title text-white">Contact Us</h1>

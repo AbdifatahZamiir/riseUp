@@ -1,53 +1,149 @@
 import React from "react";
-import Z1 from "../images/art/z1.svg";
-import Z2 from "../images/art/z2.svg";
-import Z3 from "../images/art/z3.svg";
-import Z4 from "../images/art/z4.svg";
-import Z5 from "../images/art/z5.svg";
-import Z6 from "../images/art/z6.svg";
-import Z7 from "../images/art/z7.svg";
-import Z8 from "../images/art/z8.svg";
 import { Carousel } from "react-bootstrap";
+import Img from "gatsby-image";
 
-const Slider = () => {
+const Slider = ({
+	partnerTitle,
+	imageOne,
+	imageTwo,
+	imageThree,
+	imageFour,
+	imageFive,
+	imageSix,
+	imageSeven,
+	imageEight
+}) => {
 	return (
 		<div>
 			<div className="container inner pb-5">
-				<h3 className="text-center mb-5 ">
-					We are creative company that values quality not quantity and focuses
-					on establishing long-term relationships with clients.
-				</h3>
+				<h3 className="text-center mb-5 ">{partnerTitle}</h3>
 				<div className="carousel owl-carousel clients ">
 					<Carousel className="row">
 						<Carousel.Item className="text-center">
 							<span className="item pl-5 pr-5">
-								<img src={Z1} alt="" style={{ width: `150px` }} />
+								{!!imageOne && !!imageOne.childImageSharp ? (
+									<Img
+										style={{ width: `150px` }}
+										fluid={imageOne.childImageSharp.fluid}
+										alt="partners"
+									/>
+								) : (
+									<img
+										style={{ width: `150px` }}
+										src={imageOne.publicURL}
+										alt="partners"
+									/>
+								)}
 							</span>
 							<span className="item pl-5 pr-5">
-								<img src={Z7} alt="" style={{ width: `150px` }} />
+								{!!imageTwo && !!imageTwo.childImageSharp ? (
+									<Img
+										style={{ width: `150px` }}
+										fluid={imageTwo.childImageSharp.fluid}
+										alt="partners"
+									/>
+								) : (
+									<img
+										style={{ width: `150px` }}
+										src={imageTwo.publicURL}
+										alt="partners"
+									/>
+								)}{" "}
 							</span>
 							<span className="item pl-5 pr-5">
-								<img src={Z8} alt="" style={{ width: `150px` }} />
+								{!!imageThree && !!imageThree.childImageSharp ? (
+									<Img
+										style={{ width: `150px` }}
+										fluid={imageThree.childImageSharp.fluid}
+										alt="partners"
+									/>
+								) : (
+									<img
+										style={{ width: `150px` }}
+										src={imageThree.publicURL}
+										alt="partners"
+									/>
+								)}{" "}
 							</span>{" "}
 							<span className="item pl-5 pr-5">
-								<img src={Z6} alt="" style={{ width: `150px` }} />
+								{!!imageFour && !!imageFour.childImageSharp ? (
+									<Img
+										style={{ width: `150px` }}
+										fluid={imageFour.childImageSharp.fluid}
+										alt="partners"
+									/>
+								) : (
+									<img
+										style={{ width: `150px` }}
+										src={imageFour.publicURL}
+										alt="partners"
+									/>
+								)}{" "}
 							</span>
 							<Carousel.Caption></Carousel.Caption>
 						</Carousel.Item>
 						<Carousel.Item className="text-center">
 							<span className="item pl-5 pr-5">
-								<img src={Z4} alt="" style={{ width: `150px` }} />
+								{!!imageFive && !!imageFive.childImageSharp ? (
+									<Img
+										style={{ width: `150px` }}
+										fluid={imageFive.childImageSharp.fluid}
+										alt="partners"
+									/>
+								) : (
+									<img
+										style={{ width: `150px` }}
+										src={imageFive.publicURL}
+										alt="partners"
+									/>
+								)}{" "}
 							</span>
 
 							<span className="item pl-5 pr-5">
-								<img src={Z3} alt="" style={{ width: `150px` }} />
+								{!!imageSix && !!imageSix.childImageSharp ? (
+									<Img
+										style={{ width: `150px` }}
+										fluid={imageSix.childImageSharp.fluid}
+										alt="partners"
+									/>
+								) : (
+									<img
+										style={{ width: `150px` }}
+										src={imageSix.publicURL}
+										alt="partners"
+									/>
+								)}{" "}
 							</span>
 
 							<span className="item pl-5 pr-5">
-								<img src={Z2} alt="" style={{ width: `150px` }} />
+								{!!imageSeven && !!imageSeven.childImageSharp ? (
+									<Img
+										style={{ width: `150px` }}
+										fluid={imageSeven.childImageSharp.fluid}
+										alt="partners"
+									/>
+								) : (
+									<img
+										style={{ width: `150px` }}
+										src={imageSeven.publicURL}
+										alt="partners"
+									/>
+								)}{" "}
 							</span>
 							<span className="item pl-5 pr-5">
-								<img src={Z5} alt="" style={{ width: `150px` }} />
+								{!!imageEight && !!imageEight.childImageSharp ? (
+									<Img
+										style={{ width: `150px` }}
+										fluid={imageEight.childImageSharp.fluid}
+										alt="partners"
+									/>
+								) : (
+									<img
+										style={{ width: `150px` }}
+										src={imageEight.publicURL}
+										alt="partners"
+									/>
+								)}{" "}
 							</span>
 							<Carousel.Caption></Carousel.Caption>
 						</Carousel.Item>

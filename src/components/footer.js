@@ -27,7 +27,7 @@ const Footer = () => {
 							<address>
 								Moonshine St.
 								<br className="d-none d-lg-block" /> 14/05 Light City,
-								<br className="d-none d-lg-block" /> London, United Kingdom
+								<br className="d-none d-lg-block" /> Hargeisa, Somalilad
 							</address>
 							<a href="mailto:first.last@email.com">info@email.com</a>
 							<br /> +00 (123) 456 78 90
@@ -38,27 +38,27 @@ const Footer = () => {
 							<h3 className="widget-title">Learn More</h3>
 							<ul className="list-unstyled">
 								<li>
-									<a
+									<Link
 										style={{ textDecoration: `none` }}
-										href="/"
+										href="/about"
 										className="nocolor"
 									>
 										About Us
-									</a>
+									</Link>
 								</li>
 								<li>
-									<a href="/" className="nocolor">
-										Our Story
-									</a>
-								</li>
-								<li>
-									<a href="/" className="nocolor">
-										Projects
-									</a>
-								</li>
-								<li>
-									<Link to="/" className="nocolor">
+									<Link to="/contact" className="nocolor">
 										Contact Us
+									</Link>
+								</li>
+								<li>
+									<Link to="/events" className="nocolor">
+										Events
+									</Link>
+								</li>
+								<li>
+									<Link to="/programs" className="nocolor">
+										Our Programs
 									</Link>
 								</li>
 							</ul>
@@ -75,7 +75,7 @@ const Footer = () => {
 							<div className="space10"></div>
 							<div className="newsletter-wrapper">
 								<form
-									action="https://elemisfreebies.us20.list-manage.com/subscribe/post?u=aa4947f70a475ce162057838d&amp;id=b49ef47a9a"
+									action=""
 									method="post"
 									id="mc-embedded-subscribe-form"
 									name="mc-embedded-subscribe-form"
