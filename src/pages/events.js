@@ -51,7 +51,8 @@ const Event = props => {
 	return (
 		<Layout>
 			<Head title="Events" />
-			<div className="top-image wrapper image-wrapper bg-image page-title-wrapper inverse-text">
+			<div className="top-image wrapper image-wrapper bg-image page-title-wrapper inverse-text"				style={{ paddingTop: `6rem` }}
+>
 				<div className="container inner text-center">
 					<h1 className="page-title text-white">Events</h1>
 				</div>

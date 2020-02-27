@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 import Telephone from "../images/icons/co-telephone.png";
 import Email from "../images/icons/co-email-5.png";
 import Gps from "../images/icons/ui-gps.png";
@@ -7,10 +8,42 @@ import Layout from "../components/layout";
 import Head from "../components/Head";
 
 const Contact = () => {
+	const [serverState, setServerState] = useState({
+		submitting: false,
+		status: null
+	});
+	const handleServerResponse = (ok, msg, form) => {
+		setServerState({
+			submitting: false,
+			status: { ok, msg }
+		});
+		if (ok) {
+			form.reset();
+		}
+	};
+	const handleOnSubmit = e => {
+		e.preventDefault();
+		const form = e.target;
+		setServerState({ submitting: true });
+		axios({
+			method: "post",
+			url: "https://getform.io/f/7c39b55c-d056-4537-91e5-52203f3d1bfa",
+			data: new FormData(form)
+		})
+			.then(r => {
+				handleServerResponse(true, "Thanks!", form);
+			})
+			.catch(r => {
+				handleServerResponse(false, r.response.data.error, form);
+			});
+	};
 	return (
 		<Layout>
 			<Head title="Contact Us" />
-			<div className="top-image wrapper image-wrapper bg-image page-title-wrapper inverse-text">
+			<div
+				className="top-image wrapper image-wrapper bg-image page-title-wrapper"
+				style={{ paddingTop: `6rem` }}
+			>
 				<div className="container inner text-center">
 					<h1 className="page-title text-white">Contact Us</h1>
 				</div>
@@ -65,11 +98,7 @@ const Contact = () => {
 								erat. Praesent commodo cursus.
 							</p>
 							<div className="space30"></div>
-							<form
-								id="contact-form"
-								method="post"
-								action="http://themes.iki-bir.com/snowlake/contact/contact.php"
-							>
+							<form id="contact-form" method="POST" onSubmit={handleOnSubmit}>
 								<div className="messages"></div>
 								<div className="controls">
 									<div className="form-row">
@@ -155,7 +184,13 @@ const Contact = () => {
 												type="submit"
 												className="btn btn-send"
 												value="Send message"
+												disabled={serverState.submitting}
 											/>
+											{serverState.status && (
+												<p className={!serverState.status.ok ? "errorMsg" : ""}>
+													{serverState.status.msg}
+												</p>
+											)}
 										</div>
 									</div>
 									<div className="form-row">

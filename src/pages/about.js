@@ -12,7 +12,10 @@ const AboutPage = props => {
 	return (
 		<Layout>
 			<Head title="About Us" />
-			<div className="top-image wrapper image-wrapper bg-image page-title-wrapper inverse-text">
+			<div
+				className="top-image wrapper image-wrapper bg-image page-title-wrapper inverse-text"
+				style={{ paddingTop: `6rem` }}
+			>
 				<div className="container inner text-center">
 					<h1 className="page-title text-white">About Us</h1>
 				</div>
