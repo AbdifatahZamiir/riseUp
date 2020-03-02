@@ -2,7 +2,7 @@
 templateKey: index-page
 mainTitle: We bring rapid solutions for your business needs
 subTitle: We have considered our solutions to support every stage of your growth.
-serviceTitle: The full programs we are offering is specifically designed to meet your needs.
+serviceTitle: Our Focus
 contactTitle: Convinced yet? Let's make something great together.
 partnerTitle: Some of our trusted partners
 imageOne: ./assets/z1.svg

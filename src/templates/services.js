@@ -1,6 +1,5 @@
 import React, { Fragment } from "react";
 import Layout from "../components/layout";
-import Img from "gatsby-image";
 import PopularProgram from "../components/popularProgram";
 import { graphql } from "gatsby";
 import Head from "../components/Head";
@@ -24,27 +23,6 @@ const ProgramTemplate = ({ data }) => {
 						<div className="col-lg-7">
 							<div className="blog grid grid-view">
 								<div className="item post grid-sizer">
-									<figure className="overlay overlay1 rounded mb-3">
-										{!!data.frontmatter.featuredImg &&
-										!!data.frontmatter.featuredImg.childImageSharp ? (
-											<Img
-												fluid={
-													data.frontmatter.featuredImg.childImageSharp.fluid
-												}
-												alt={data.frontmatter.title}
-											/>
-										) : (
-											<img
-												src={data.frontmatter.featuredImg.publicURL}
-												alt={data.frontmatter.title}
-											/>
-										)}
-									</figure>
-									<div className="category">
-										<a href="/" className="badge badge-pill bg-meander">
-											{data.frontmatter.tag}
-										</a>
-									</div>
 									<h2 className="post-title">{data.frontmatter.title}</h2>
 									<div dangerouslySetInnerHTML={{ __html: data.html }} />
 								</div>

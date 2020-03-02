@@ -25,9 +25,9 @@ const Footer = () => {
 						<div className="widget">
 							<h3 className="widget-title">Get in Touch</h3>
 							<address>
-								Moonshine St.
-								<br className="d-none d-lg-block" /> 14/05 Light City,
-								<br className="d-none d-lg-block" /> Hargeisa, Somalilad
+								Head office: Moonshine St.
+								<br className="d-none d-lg-block" /> Jigjiga – Expecting
+								<br className="d-none d-lg-block" /> to expand to Addis Ababa.
 							</address>
 							<a href="mailto:first.last@email.com">info@email.com</a>
 							<br /> +00 (123) 456 78 90
