@@ -5,7 +5,7 @@ import Popular from "../components/popularPost";
 import { graphql } from "gatsby";
 import Head from "../components/Head";
 
-const EventTemplate = ({ data }) => {
+export const EventTemplate = ({ data }) => {
 	return (
 		<Fragment>
 			<Head title={data.frontmatter.title} />

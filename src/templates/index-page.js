@@ -28,7 +28,6 @@ export const IndexPageTemplate = ({
 		<SlideShow mainTitle={mainTitle} subTitle={subTitle} />
 		<About />
 		<Service serviceTitle={serviceTitle} />
-		<ContactCom contactTitle={contactTitle} />
 		<Slider
 			partnerTitle={partnerTitle}
 			imageOne={imageOne}
@@ -40,6 +39,7 @@ export const IndexPageTemplate = ({
 			imageSeven={imageSeven}
 			imageEight={imageEight}
 		/>
+		<ContactCom contactTitle={contactTitle} />
 	</Fragment>
 );
 

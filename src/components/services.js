@@ -1,6 +1,6 @@
 import React from "react";
 import Img from "gatsby-image";
-import { useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql, Link } from "gatsby";
 
 const Service = ({ serviceTitle }) => {
 	const services = useStaticQuery(graphql`
@@ -12,6 +12,9 @@ const Service = ({ serviceTitle }) => {
 				edges {
 					node {
 						id
+						fields {
+							slug
+						}
 						frontmatter {
 							title
 							description
@@ -58,6 +61,9 @@ const Service = ({ serviceTitle }) => {
 								</div>
 								<h5>{node.frontmatter.title}</h5>
 								<p>{node.frontmatter.description}</p>
+								<Link className="btn" to={node.fields.slug}>
+									Read More
+								</Link>
 							</div>
 						</div>
 					);

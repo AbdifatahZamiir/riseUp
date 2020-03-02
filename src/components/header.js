@@ -27,7 +27,7 @@ class Header extends Component {
 			: "navbar-toggler navbar-toggler-right ";
 		return (
 			<header className="main-header">
-				<nav className="navbar navbar-expand-lg navbar-light nav-color">
+				<nav className="navbar navbar-expand-lg navbar-light nav-color sticky-top">
 					<div className="container border-style">
 						<div className="logo">
 							<Link
