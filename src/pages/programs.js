@@ -1,6 +1,6 @@
 import React from "react";
 import Img from "gatsby-image";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import Layout from "../components/layout";
 import Head from "../components/Head";
 
@@ -20,11 +20,7 @@ const Services = props => {
 				</div>
 			</div>
 			<div className="container mb-4">
-				<h3 className="display-3 text-center mt-4 mb-4">
-					The full service we are offering is specifically{" "}
-					<br className="d-none d-lg-block" />
-					designed to meet your business needs.
-				</h3>
+				<h3 className="display-3 text-center mt-4 mb-4">Our Programs</h3>
 				<div className="row text-center">
 					{allPosts.map(({ node }) => {
 						return (
@@ -55,6 +51,9 @@ const Services = props => {
 									</div>
 									<h5>{node.frontmatter.title}</h5>
 									<p>{node.frontmatter.description}</p>
+									<Link className="btn" to={node.fields.slug}>
+										Read More
+									</Link>
 								</div>
 							</div>
 						);
@@ -76,6 +75,9 @@ export const query = graphql`
 			edges {
 				node {
 					id
+					fields {
+						slug
+					}
 					frontmatter {
 						title
 						description
