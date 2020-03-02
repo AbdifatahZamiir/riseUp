@@ -19,7 +19,7 @@ const Popular = () => {
 						}
 						frontmatter {
 							title
-							publishedDate
+							publishedDate(formatString: "MMMM DD, YYYY")
 							featuredImg {
 								childImageSharp {
 									fluid(maxWidth: 800) {
@@ -69,9 +69,8 @@ const Popular = () => {
 								</h6>
 								<div className="meta">
 									<span className="date">
-										<i className="jam jam-clock">
-											<FaClock />
-										</i>
+										<FaClock size="20px" />
+										{"  "}
 										{publishedDate}
 									</span>
 								</div>

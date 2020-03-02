@@ -51,8 +51,10 @@ const Event = props => {
 	return (
 		<Layout>
 			<Head title="Events" />
-			<div className="top-image wrapper image-wrapper bg-image page-title-wrapper inverse-text"				style={{ paddingTop: `6rem` }}
->
+			<div
+				className="top-image wrapper image-wrapper bg-image page-title-wrapper inverse-text"
+				style={{ paddingTop: `6rem` }}
+			>
 				<div className="container inner text-center">
 					<h1 className="page-title text-white">Events</h1>
 				</div>
@@ -106,9 +108,8 @@ const Event = props => {
 												</div>
 												<div className="meta mb-0">
 													<span className="date">
-														<i className="jam jam-clock">
-															<FaClock />
-														</i>
+														<FaClock size="20px" />
+														{"  "}
 														{publishedDate}
 													</span>
 												</div>
@@ -165,7 +166,7 @@ export const query = graphql`
 					}
 					frontmatter {
 						title
-						publishedDate
+						publishedDate(formatString: "MMMM DD, YYYY")
 						tag
 						description
 						featuredImg {
