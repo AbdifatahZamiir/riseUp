@@ -42,6 +42,6 @@ const Wrapper = styled.div`
 
 	.open span:nth-child(1) {
 		transform: rotate(-45deg);
-		top: 22px;
+		top: 24px;
 	}
 `;

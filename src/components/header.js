@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import Navbar from "./navbar/Navbar";
 
 import GlobalStyle from "../styles/Global";
@@ -14,13 +14,13 @@ class Header extends Component {
 
 	render() {
 		return (
-			<>
+			<Fragment className="container">
 				<Navbar
 					navbarState={this.state.navbarOpen}
 					handleNavbar={this.handleNavbar}
 				/>
 				<GlobalStyle />
-			</>
+			</Fragment>
 		);
 	}
 }

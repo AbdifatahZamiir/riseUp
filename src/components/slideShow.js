@@ -1,13 +1,13 @@
 import React from "react";
 import Concept21 from "../images/icons/ui-idea.png";
 import Employ from "../images/employ.png";
-
 import { Carousel } from "react-bootstrap";
+import { Link } from "gatsby";
 
 const SlideShow = ({ mainTitle, subTitle }) => {
 	return (
-		<div className="wrapper white-wrapper">
-			<div className="container rev_slider_wrapper fullwidth-container dark-spinner dark-nav text-center">
+		<div className="wrapper white-wrapper text-center">
+			<div className="container rev_slider_wrapper fullwidth-container dark-spinner dark-nav">
 				<Carousel style={{ zIndex: `0` }}>
 					<Carousel.Item>
 						<div id="slider16" className="row rev_slider fullwidthbanner">
@@ -32,9 +32,12 @@ const SlideShow = ({ mainTitle, subTitle }) => {
 								<div className="heading-two color-dark mt-3 mb-4">
 									{subTitle}
 								</div>
-								<a className="btn btn-l btn-default animated-btn" href="/">
+								<Link
+									className="btn btn-l btn-default animated-btn"
+									to="/about"
+								>
 									Learn More
-								</a>
+								</Link>
 							</div>
 							<div className="col-md-6 col-lg-6 col-sm-6 r-pic">
 								<img className="size-pic" src={Employ} alt="empleyment" />
