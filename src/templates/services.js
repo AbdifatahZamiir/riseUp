@@ -10,11 +10,11 @@ const ProgramTemplate = ({ data }) => {
 		<Fragment>
 			<Head title={data.frontmatter.title} />
 			<div
-				className="top-image wrapper image-wrapper bg-image page-title-wrapper inverse-text"
-				style={{ paddingTop: `6rem` }}
+				className="container gray-wrapper top-image  mt-5"
+				style={{ paddingBottom: `15rem`, backgroundAttachment: `fixed` }}
 			>
 				<div className="container inner text-center">
-					<h1 className="page-title text-white">Program Detail</h1>
+					<h1 className="page-title text-white">Programs Details</h1>
 				</div>
 			</div>
 			<div className="wrapper light-wrapper">
@@ -23,7 +23,9 @@ const ProgramTemplate = ({ data }) => {
 						<div className="col-lg-7">
 							<div className="blog grid grid-view">
 								<div className="item post grid-sizer">
-									<h2 className="post-title">{data.frontmatter.title}</h2>
+									<h2 className="post-title text-center">
+										{data.frontmatter.title}
+									</h2>
 									<div dangerouslySetInnerHTML={{ __html: data.html }} />
 								</div>
 							</div>

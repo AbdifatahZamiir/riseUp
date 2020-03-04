@@ -18,7 +18,7 @@ const Slider = ({
 			<div className="container inner pb-5">
 				<h3 className="text-center mb-5 ">{partnerTitle}</h3>
 				<div className="carousel owl-carousel clients ">
-					<Carousel className="row">
+					<Carousel className="row" style={{ zIndex: `0` }}>
 						<Carousel.Item className="text-center">
 							<span className="item pl-5 pr-5">
 								{!!imageOne && !!imageOne.childImageSharp ? (

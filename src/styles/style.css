@@ -76,7 +76,7 @@ address {
 	line-height: 1.4rem;
 }
 .subscribe-input {
-	background: #464343 !important;
+	background: #ece913 !important;
 }
 input,
 button,
@@ -531,7 +531,7 @@ canvas {
 }
 footer.dark-wrapper,
 .footer-dark-wrapper {
-	background-color: #1e2228 !important;
+	background-color: #f9fafb !important;
 }
 .pattern-wrapper {
 	background: transparent repeat left top;
@@ -1843,6 +1843,9 @@ figure.overlay img {
 .sidebar .meta a:hover {
 	color: #606060 !important;
 }
+footer {
+	border-top: 5px solid rgb(255, 255, 255);
+}
 footer [class*="col-"] .widget {
 	margin-top: 30px;
 }
@@ -1863,7 +1866,7 @@ footer a.btn:hover {
 	color: var(--color-white) !important;
 }
 footer.inverse-text:not(.blockquote-footer) * {
-	color: #cacaca;
+	color: #363636;
 }
 footer.inverse-text .nocolor.color-text {
 	color: #606060;
@@ -6115,11 +6118,11 @@ footer.inverse-text address {
 	letter-spacing: 0.5px;
 	line-height: 40px;
 	font-weight: 600;
-	animation: moveInLeft 1s ease-out;
+	animation: moveInLeft 1.5s ease-out;
 }
 .heading-two {
 	font-size: 1.5em;
-	animation: moveInRight 1s ease-out;
+	animation: moveInRight 1.5s ease-out;
 }
 
 .size-pic {
@@ -6224,8 +6227,8 @@ footer.inverse-text address {
 		),
 		url("../images/bread.jpg");
 	background-size: cover;
-	background-position: top;
-	height: 90vh;
+	background-position: bottom;
+	height: 10vh;
 }
 
 .pro-img {
@@ -6238,4 +6241,8 @@ footer.inverse-text address {
 	padding-right: 0;
 	padding-top: 0;
 	margin-bottom: 1.75rem;
+}
+
+#mylink {
+	text-decoration: none !important;
 }

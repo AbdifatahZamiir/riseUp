@@ -10,11 +10,11 @@ export const EventTemplate = ({ data }) => {
 		<Fragment>
 			<Head title={data.frontmatter.title} />
 			<div
-				className="top-image wrapper image-wrapper bg-image page-title-wrapper inverse-text"
-				style={{ paddingTop: `6rem` }}
+				className="container gray-wrapper top-image  mt-5"
+				style={{ paddingBottom: `15rem`, backgroundAttachment: `fixed` }}
 			>
 				<div className="container inner text-center">
-					<h1 className="page-title text-white">Event Detail</h1>
+					<h1 className="page-title text-white">Event Details</h1>
 				</div>
 			</div>
 			<div className="wrapper light-wrapper">

@@ -5,6 +5,8 @@ subTitle: Mission -> To enable an inclusive economic growth through talent and e
 subTitleTwo: Vision -> To nurture creative generation of entrepreneurs to successfully launch, lead and grow sustainable businesses and contribute economic development.
 ---
 
-Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean lacinia bibendum nulla sed consectetur.
+Riseup is a social enterprise founded in 2019 to create innovative and long-lasting solutions to youth employment challenges.
 
-Cras mattis consectetur purus sit amet fermentum. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh.
+RiseUp offers most in demand resources by entrepreneurs and startups, and a launching pad for innovative and creative business ideas. The objective is to nurture and bread new creative generation of entrepreneurs, lead and grow sustainable businesses and contribute to the economic development.
+
+To give a platform to the creative and social innovators that are seeking to make change happen and contribute the economies.
