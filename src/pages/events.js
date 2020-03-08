@@ -123,7 +123,10 @@ const Event = props => {
 							<div className="sidebox widget">
 								<h3 className="widget-title">Search</h3>
 								<div className="form-group has-search inner-addon left-addon">
-									<span className="fa fa-search form-control-feedback">
+									<span
+										className="fa fa-search form-control-feedback"
+										style={{ zIndex: `0` }}
+									>
 										<FaSearch
 											size="18px"
 											color="#d8681d"
