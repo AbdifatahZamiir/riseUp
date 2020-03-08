@@ -8,7 +8,7 @@ const SlideShow = ({ mainTitle, subTitle }) => {
 	return (
 		<div className="wrapper white-wrapper text-center">
 			<div className="container rev_slider_wrapper fullwidth-container dark-spinner dark-nav">
-				<Carousel style={{ zIndex: `0` }}>
+				<Carousel style={{ zIndex: `0` }} className="carousel-fade">
 					<Carousel.Item>
 						<div id="slider16" className="row rev_slider fullwidthbanner">
 							<div className="col-lg-6 col-md-6 col-sm-6 heading-con">
@@ -19,7 +19,7 @@ const SlideShow = ({ mainTitle, subTitle }) => {
 									{subTitle}
 								</div> */}
 								<Link
-									className="btn btn-l btn-default animated-btn"
+									className="btn btn-l btn-default animated-btn mb-4"
 									to="/about"
 								>
 									Learn More
@@ -40,7 +40,7 @@ const SlideShow = ({ mainTitle, subTitle }) => {
 									{subTitle}
 								</div> */}
 								<Link
-									className="btn btn-l btn-default animated-btn"
+									className="btn btn-l btn-default animated-btn mb-4"
 									to="/about"
 								>
 									Learn More
