@@ -71,7 +71,7 @@ const Popular = () => {
 								</h6>
 								<div className="meta">
 									<span className="date">
-										<FaClock size="20px" />
+										<FaClock size="20px" color="d8681d" />
 										{"  "}
 										{publishedDate}
 									</span>

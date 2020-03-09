@@ -89,7 +89,8 @@ const LatestEvent = () => {
 
 										<div className="meta mb-0">
 											<span className="date">
-												<FaClock size="20px" />
+												<FaClock size="20px" color="d8681d" />
+
 												{"  "}
 												{publishedDate}
 											</span>
