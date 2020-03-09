@@ -34,7 +34,10 @@ const Service = ({ serviceTitle }) => {
 	`);
 	return (
 		<div className="container mb-4">
-			<h3 className="display-3 text-center mt-5 mb-5">
+			<h3
+				className="display-3 text-center"
+				style={{ marginBottom: "8rem", marginTop: "8rem" }}
+			>
 				{serviceTitle} <br className="d-none d-lg-block" />
 			</h3>
 			<div className="row text-center">

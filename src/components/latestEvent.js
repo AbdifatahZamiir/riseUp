@@ -40,7 +40,12 @@ const LatestEvent = () => {
 	return (
 		<div className="wrapper light-wrapper">
 			<div className="container inner">
-				<h3 className="display-3 text-center mt-4 mb-5">Latest Events</h3>
+				<h3
+					className="display-3 text-center mt-4"
+					style={{ marginBottom: "8rem" }}
+				>
+					Latest Events
+				</h3>
 				<div className="row">
 					<div className="blog grid grid-view">
 						<div className="row isotope">
