@@ -31,6 +31,7 @@ const Services = props => {
 											{!!node.frontmatter.aboutImg &&
 											!!node.frontmatter.aboutImg.childImageSharp ? (
 												<Img
+													style={{ height: `20rem` }}
 													fluid={
 														node.frontmatter.aboutImg.childImageSharp.fluid
 													}
@@ -38,6 +39,7 @@ const Services = props => {
 												/>
 											) : (
 												<img
+												style={{ height: `20rem` }}
 													src={node.frontmatter.aboutImg.publicURL}
 													alt={node.frontmatter.title}
 												/>
