@@ -77,6 +77,7 @@ export const query = graphql`
 	query {
 		allMarkdownRemark(
 			filter: { frontmatter: { templateKey: { eq: "services" } } }
+			sort: { fields: frontmatter___counter, order: ASC }
 		) {
 			edges {
 				node {
