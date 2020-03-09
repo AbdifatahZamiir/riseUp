@@ -12,7 +12,7 @@ const Services = props => {
 		<Layout>
 			<Head title="Programs" />
 			<div
-				className="container gray-wrapper top-image  mt-5"
+				className=" gray-wrapper top-image"
 				style={{ paddingBottom: `15rem`, backgroundAttachment: `fixed` }}
 			>
 				<div className="container inner text-center">

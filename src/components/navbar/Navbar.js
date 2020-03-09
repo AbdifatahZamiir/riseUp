@@ -10,8 +10,7 @@ import { Link } from "gatsby";
 const Navbar = props => {
 	const barAnimation = useSpring({
 		from: { transform: "translate3d(0, -10rem, 0)" },
-		transform: "translate3d(0, 0, 0)",
-		textDecoration: "none"
+		transform: "translate3d(0, 0, 0)"
 	});
 
 	const linkAnimation = useSpring({
@@ -27,9 +26,7 @@ const Navbar = props => {
 				<FlexContainer>
 					<Brand />
 					<NavLinks style={linkAnimation}>
-						<Link id="mylink" styles={{ textDecoration: `none` }} to="/">
-							Home
-						</Link>
+						<Link to="/">Home</Link>
 						<Link to="/about">About Us</Link>
 						<Link to="/programs">Programs</Link>
 						<Link to="/events">Events</Link>
@@ -85,10 +82,12 @@ const NavLinks = styled(animated.ul)`
 		color: #000000;
 		// text-transform: uppercase;
 		font-weight: 600;
-		border-bottom: 1px solid transparent;
+		// border-bottom: 1px solid transparent;
 		margin: 0 1.5rem;
 		transition: all 300ms linear 0s;
 		text-decoration: none;
+		-webkit-box-shadow: none;
+
 		cursor: pointer;
 
 		&:hover {

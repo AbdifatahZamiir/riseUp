@@ -10,7 +10,7 @@ export const EventTemplate = ({ data }) => {
 		<Fragment>
 			<Head title={data.frontmatter.title} />
 			<div
-				className="container gray-wrapper top-image  mt-5"
+				className=" gray-wrapper top-image"
 				style={{ paddingBottom: `15rem`, backgroundAttachment: `fixed` }}
 			>
 				<div className="container inner text-center">

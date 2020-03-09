@@ -10,11 +10,11 @@ const ProgramTemplate = ({ data }) => {
 		<Fragment>
 			<Head title={data.frontmatter.title} />
 			<div
-				className="container gray-wrapper top-image  mt-5"
+				className=" gray-wrapper top-image"
 				style={{ paddingBottom: `15rem`, backgroundAttachment: `fixed` }}
 			>
 				<div className="container inner text-center">
-					<h1 className="page-title text-white">Programs Details</h1>
+					<h1 className="page-title text-white">Program Detail</h1>
 				</div>
 			</div>
 			<div className="wrapper light-wrapper">

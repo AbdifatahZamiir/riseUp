@@ -11,7 +11,7 @@ const Contact = () => {
 		<Layout>
 			<Head title="Contact Us" />
 			<div
-				className="container gray-wrapper top-image  mt-5"
+				className=" gray-wrapper top-image"
 				style={{ paddingBottom: `15rem`, backgroundAttachment: `fixed` }}
 			>
 				<div className="container inner text-center">

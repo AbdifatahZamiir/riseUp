@@ -113,7 +113,6 @@ a {
 	-webkit-transition: all 200ms ease-in-out;
 	-o-transition: all 200ms ease-in-out;
 	transition: all 200ms ease-in-out;
-	text-decoration: none !important;
 }
 .post-title a,
 a.nocolor {
@@ -122,7 +121,7 @@ a.nocolor {
 
 a:hover,
 a:focus {
-	text-decoration: none;
+	text-decoration: none !important;
 	color: #d8681d !important;
 }
 
@@ -411,6 +410,9 @@ canvas {
 	-webkit-box-shadow: none;
 	box-shadow: none;
 	display: inline-block;
+}
+.mynavlink {
+	-webkit-box-shadow: none;
 }
 .btn-icon i {
 	vertical-align: -1px;
@@ -2502,6 +2504,7 @@ textarea.error {
 	}
 	.nav-tabs.nav-justified .nav-item .nav-link * {
 		display: inline !important;
+		text-decoration: none !important;
 	}
 	.nav-tabs.nav-justified .nav-item .nav-link span {
 		padding-left: 0.5rem;
