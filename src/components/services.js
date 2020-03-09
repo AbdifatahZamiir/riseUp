@@ -64,7 +64,7 @@ const Service = ({ serviceTitle }) => {
 								</div>
 								<h5>{node.frontmatter.title}</h5>
 								<p>{node.frontmatter.description}</p>
-								<Link className="btn" to={node.fields.slug}>
+								<Link className="btn" to="/programs">
 									Read More
 								</Link>
 							</div>
