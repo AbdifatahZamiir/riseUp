@@ -1,6 +1,6 @@
 import React from "react";
 import Img from "gatsby-image";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import Head from "../components/Head";
 
@@ -19,45 +19,52 @@ const Services = props => {
 					<h1 className="page-title text-white">Programs</h1>
 				</div>
 			</div>
-			<div className="container mb-4">
-				<h3 className="display-3 text-center mt-4 mb-4">Our Programs</h3>
-				<div className="row text-center">
-					{allPosts.map(({ node }) => {
-						return (
-							<div className="col-md-6 col-lg-4 text-center" key={node.id}>
-								<div className="box bg-white shadow shadow-hover mb-4">
-									<div
-										className="icon icon-svg mb-4 text-center"
-										style={{
-											width: "20%",
-											marginLeft: `6em`,
-											textAlign: `center`
-										}}
-									>
-										{!!node.frontmatter.featuredImg &&
-										!!node.frontmatter.featuredImg.childImageSharp ? (
-											<Img
-												fluid={
-													node.frontmatter.featuredImg.childImageSharp.fluid
-												}
-												alt={node.frontmatter.title}
-											/>
-										) : (
-											<img
-												src={node.frontmatter.featuredImg.publicURL}
-												alt={node.frontmatter.title}
-											/>
-										)}{" "}
+
+			<div class="wrapper white-wrapper">
+				<div class="container inner">
+					<div class="row align-items-center">
+						{allPosts.map(({ node }) => {
+							return (
+								<div className="row mb-5" key={node.id}>
+									<div class="col-lg-6 col-md-6 text-center">
+										<div class="">
+											{!!node.frontmatter.aboutImg &&
+											!!node.frontmatter.aboutImg.childImageSharp ? (
+												<Img
+													fluid={
+														node.frontmatter.aboutImg.childImageSharp.fluid
+													}
+													alt={node.frontmatter.title}
+												/>
+											) : (
+												<img
+													src={node.frontmatter.aboutImg.publicURL}
+													alt={node.frontmatter.title}
+												/>
+											)}{" "}
+										</div>
 									</div>
-									<h5>{node.frontmatter.title}</h5>
-									<p>{node.frontmatter.description}</p>
-									<Link className="btn" to={node.fields.slug}>
-										Read More
-									</Link>
+									<div class="col-lg-6 col-md-6 pl-5">
+										<h2
+											class="title-color color-gray "
+											style={{ fontSize: `1.5rem`, fontWeight: `600` }}
+										>
+											<span style={{ color: `#d8681d`, fontSize: `1.5rem` }}>
+												#{" "}
+											</span>{" "}
+											{node.frontmatter.counter}
+										</h2>
+										<h3 class="display-3">{node.frontmatter.title}</h3>
+										<div class="space20"></div>
+										<div
+											style={{ fontSize: `1rem`, letterSpacing: `.01rem` }}
+											dangerouslySetInnerHTML={{ __html: node.html }}
+										/>
+									</div>
 								</div>
-							</div>
-						);
-					})}
+							);
+						})}
+					</div>
 				</div>
 			</div>
 		</Layout>
@@ -70,18 +77,27 @@ export const query = graphql`
 	query {
 		allMarkdownRemark(
 			filter: { frontmatter: { templateKey: { eq: "services" } } }
-			sort: { fields: frontmatter___publishedDate, order: DESC }
 		) {
 			edges {
 				node {
 					id
+					html
 					fields {
 						slug
 					}
 					frontmatter {
 						title
+						counter
 						description
-						featuredImg {
+						aboutImg {
+							childImageSharp {
+								fluid(maxWidth: 800) {
+									...GatsbyImageSharpFluid
+								}
+							}
+							publicURL
+						}
+						aboutImg {
 							childImageSharp {
 								fluid(maxWidth: 800) {
 									...GatsbyImageSharpFluid

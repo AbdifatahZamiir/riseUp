@@ -65,7 +65,9 @@ const Popular = () => {
 							<div className="post-content">
 								<h6 className="post-title">
 									{" "}
-									<Link to={slug}>{title}</Link>
+									<Link style={{ boxShadow: `none` }} to={slug}>
+										{title}
+									</Link>
 								</h6>
 								<div className="meta">
 									<span className="date">

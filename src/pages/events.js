@@ -101,7 +101,9 @@ const Event = props => {
 													<p className="badge badge-pill bg-meander">{tag}</p>
 												</div>
 												<h2 className="post-title">
-													<Link to={slug}>{title}</Link>
+													<Link style={{ boxShadow: `none` }} to={slug}>
+														{title}
+													</Link>
 												</h2>
 												<div className="post-content">
 													<p>{description}</p>

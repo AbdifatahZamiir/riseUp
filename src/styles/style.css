@@ -411,9 +411,7 @@ canvas {
 	box-shadow: none;
 	display: inline-block;
 }
-.mynavlink {
-	-webkit-box-shadow: none;
-}
+
 .btn-icon i {
 	vertical-align: -1px;
 }

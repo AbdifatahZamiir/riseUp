@@ -16,7 +16,7 @@ const Slider = ({
 	return (
 		<div>
 			<div className="container inner pb-5">
-				<h3 className="text-center mb-5 ">{partnerTitle}</h3>
+				<h3 className="display-3 text-center mt-4 mb-5 ">{partnerTitle}</h3>
 				<div className="carousel owl-carousel clients ">
 					<Carousel className="row" style={{ zIndex: `0` }}>
 						<Carousel.Item className="text-center">
