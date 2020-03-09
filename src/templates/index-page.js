@@ -14,15 +14,7 @@ export const IndexPageTemplate = ({
 	subTitle,
 	serviceTitle,
 	contactTitle,
-	partnerTitle,
-	imageOne,
-	imageTwo,
-	imageThree,
-	imageFour,
-	imageFive,
-	imageSix,
-	imageSeven,
-	imageEight
+	partnerTitle
 }) => (
 	<Fragment>
 		<Head title="Rise Up" />
@@ -31,17 +23,7 @@ export const IndexPageTemplate = ({
 		<Service serviceTitle={serviceTitle} />
 		<ContactCom contactTitle={contactTitle} />
 		<LatestEvent />
-		<Slider
-			partnerTitle={partnerTitle}
-			imageOne={imageOne}
-			imageTwo={imageTwo}
-			imageThree={imageThree}
-			imageFour={imageFour}
-			imageFive={imageFive}
-			imageSix={imageSix}
-			imageSeven={imageSeven}
-			imageEight={imageEight}
-		/>
+		<Slider partnerTitle={partnerTitle} />
 	</Fragment>
 );
 
@@ -56,14 +38,6 @@ const IndexPost = ({ data }) => {
 				serviceTitle={frontmatter.serviceTitle}
 				contactTitle={frontmatter.contactTitle}
 				partnerTitle={frontmatter.partnerTitle}
-				imageOne={frontmatter.imageOne}
-				imageTwo={frontmatter.imageTwo}
-				imageThree={frontmatter.imageThree}
-				imageFour={frontmatter.imageFour}
-				imageFive={frontmatter.imageFive}
-				imageSix={frontmatter.imageSix}
-				imageSeven={frontmatter.imageSeven}
-				imageEight={frontmatter.imageEight}
 			/>
 		</Layout>
 	);
@@ -79,70 +53,6 @@ export const pageQuery = graphql`
 				serviceTitle
 				contactTitle
 				partnerTitle
-				imageOne {
-					childImageSharp {
-						fluid(maxWidth: 100) {
-							...GatsbyImageSharpFluid
-						}
-					}
-					publicURL
-				}
-				imageTwo {
-					childImageSharp {
-						fluid(maxWidth: 100) {
-							...GatsbyImageSharpFluid
-						}
-					}
-					publicURL
-				}
-				imageThree {
-					childImageSharp {
-						fluid(maxWidth: 100) {
-							...GatsbyImageSharpFluid
-						}
-					}
-					publicURL
-				}
-				imageFour {
-					childImageSharp {
-						fluid(maxWidth: 100) {
-							...GatsbyImageSharpFluid
-						}
-					}
-					publicURL
-				}
-				imageFive {
-					childImageSharp {
-						fluid(maxWidth: 100) {
-							...GatsbyImageSharpFluid
-						}
-					}
-					publicURL
-				}
-				imageSix {
-					childImageSharp {
-						fluid(maxWidth: 100) {
-							...GatsbyImageSharpFluid
-						}
-					}
-					publicURL
-				}
-				imageSeven {
-					childImageSharp {
-						fluid(maxWidth: 100) {
-							...GatsbyImageSharpFluid
-						}
-					}
-					publicURL
-				}
-				imageEight {
-					childImageSharp {
-						fluid(maxWidth: 100) {
-							...GatsbyImageSharpFluid
-						}
-					}
-					publicURL
-				}
 			}
 		}
 	}

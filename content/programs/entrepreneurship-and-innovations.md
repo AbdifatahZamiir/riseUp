@@ -2,12 +2,10 @@
 templateKey: services
 counter: 1
 featuredImg: ../assets/sm-setting.png
-aboutImg: ../assets/about2.jpg
+aboutImg: ../assets/pro1.jpg
 title: Entrepreneurship And Innovations
 description: Social Entrepreneurship can tackle major social issues and offer new ideas for wide-scale change...
 ---
-
-<!-- ![Entrepreneurship And Innovations](../assets/entre.png) -->
 
 Social Entrepreneurship can tackle major social issues and offer new ideas for wide-scale change. Rather than leaving societal needs to the government or business sectors, social entrepreneurs find what is not working and solve the problem by changing the system, spreading the solution, and persuading entire societies to take new leaps.
 
