@@ -110,8 +110,12 @@ const Event = props => {
 												</div>
 												<div className="meta mb-0">
 													<span className="date">
-														<FaClock size="20px" color="d8681d" />
-														{"  "}
+														<FaClock
+															size="19px"
+															color="d8681d"
+															className="mb-2"
+														/>
+														{"     "}
 														{publishedDate}
 													</span>
 												</div>
