@@ -42,7 +42,7 @@ const About = () => {
 										</h3>
 										<p>
 											Successful <br className="d-md-none" />
-											Start Ups
+											Start ups
 										</p>
 									</div>
 								</div>
@@ -57,9 +57,12 @@ const About = () => {
 							<div className="col-lg-6 pr-60 pr-md-15" key={id}>
 								<h2 className="title-color color-gray">About Us</h2>
 								<h3 className="display-3">{mainTitle}</h3>
-								<div className="space10"></div>
-								<p>{subTitle}</p>
-								<p>{subTitleTwo}</p>
+								<p style={{ fontSize: `1rem`, letterSpacing: `.01rem` }}>
+									{subTitle}
+								</p>
+								<p style={{ fontSize: `1rem`, letterSpacing: `.01rem` }}>
+									{subTitleTwo}
+								</p>
 							</div>
 						);
 					})}

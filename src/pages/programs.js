@@ -20,14 +20,14 @@ const Services = props => {
 				</div>
 			</div>
 
-			<div class="wrapper white-wrapper">
-				<div class="container inner">
-					<div class="row align-items-center">
+			<div className="wrapper white-wrapper">
+				<div className="container inner">
+					<div className="row align-items-center">
 						{allPosts.map(({ node }) => {
 							return (
 								<div className="row mb-5" key={node.id}>
-									<div class="col-lg-6 col-md-6 text-center">
-										<div class="">
+									<div className="col-lg-6 col-md-6 text-center">
+										<div className="">
 											{!!node.frontmatter.aboutImg &&
 											!!node.frontmatter.aboutImg.childImageSharp ? (
 												<Img
@@ -46,9 +46,9 @@ const Services = props => {
 											)}{" "}
 										</div>
 									</div>
-									<div class="col-lg-6 col-md-6 pl-5">
+									<div className="col-lg-6 col-md-6 pl-5">
 										<h2
-											class="title-color color-gray "
+											className="title-color color-gray "
 											style={{ fontSize: `1.5rem`, fontWeight: `600` }}
 										>
 											<span style={{ color: `#d8681d`, fontSize: `1.5rem` }}>
@@ -56,8 +56,8 @@ const Services = props => {
 											</span>{" "}
 											{node.frontmatter.counter}
 										</h2>
-										<h3 class="display-3">{node.frontmatter.title}</h3>
-										<div class="space20"></div>
+										<h3 className="display-3">{node.frontmatter.title}</h3>
+										<div className="space20"></div>
 										<div
 											style={{ fontSize: `1rem`, letterSpacing: `.01rem` }}
 											dangerouslySetInnerHTML={{ __html: node.html }}

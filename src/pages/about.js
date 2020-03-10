@@ -22,7 +22,7 @@ const AboutPage = props => {
 			</div>
 			{allPosts.map(({ node }) => {
 				return (
-					<div className="wrapper" key={node.id}>
+					<div className="wrapper white-wrapper" key={node.id}>
 						<div className="container inner">
 							<div className="row align-items-center">
 								<div className="col-lg-6 order-lg-2 text-center">

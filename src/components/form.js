@@ -36,7 +36,7 @@ const Form = () => {
 			<div className="container inner">
 				<div className="row">
 					<div className="col-md-12 col-lg-12 ">
-						<h2 className="section-title text-center">Drop Us a Line</h2>
+						<h2 className="section-title text-center pb-5">Drop Us a Line</h2>
 						<div className="space30"></div>
 						<form id="contact-form" method="POST" onSubmit={handleOnSubmit}>
 							<div className="messages"></div>
