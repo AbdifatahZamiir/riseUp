@@ -2544,10 +2544,6 @@ textarea.error {
 	font-weight: 600;
 	animation: moveInLeft 1.5s ease-out;
 }
-.heading-two {
-	font-size: 1.5em;
-	animation: moveInRight 1.5s ease-out;
-}
 
 .size-pic {
 	width: 25.5rem;
@@ -2566,10 +2562,14 @@ textarea.error {
 	.heading-con {
 		margin-top: 30px;
 	}
-	.heading-two {
-		font-size: 1em;
-		animation: moveInRight 1s ease-out;
+	.heading-one {
+		font-size: 1.2em;
+		letter-spacing: 0.4px;
+		line-height: 40px;
+		font-weight: 600;
+		animation: moveInLeft 1.5s ease-out;
 	}
+
 	.r-pic {
 		display: none;
 	}
@@ -2581,11 +2581,14 @@ textarea.error {
 }
 @media (min-width: 504px) and (max-width: 1326px) {
 	.heading-con {
-		margin-top: 10px;
+		margin-top: 50px;
 	}
-	.heading-two {
-		font-size: 1.2em;
-		animation: moveInRight 1s ease-out;
+	.heading-one {
+		font-size: 1.1em;
+		letter-spacing: 0.5px;
+		line-height: 40px;
+		font-weight: 600;
+		animation: moveInLeft 1.5s ease-out;
 	}
 	.size-pic {
 		width: 20rem;

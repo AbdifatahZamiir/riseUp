@@ -55,7 +55,12 @@ const About = () => {
 						const { subTitle, subTitleTwo, mainTitle } = node.frontmatter;
 						return (
 							<div className="col-lg-6 pr-60 pr-md-15" key={id}>
-								<h2 className="title-color color-gray">About Us</h2>
+								<h2
+									className="title-color color-gray"
+									style={{ fontSize: "1rem", fontWeight: "700" }}
+								>
+									About Us
+								</h2>
 								<h3 className="display-3">{mainTitle}</h3>
 								<p style={{ fontSize: `1rem`, letterSpacing: `.01rem` }}>
 									{subTitle}

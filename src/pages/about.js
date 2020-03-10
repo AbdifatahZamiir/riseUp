@@ -51,12 +51,36 @@ const AboutPage = props => {
 								</div>
 								<div className="space30 d-none d-md-block d-lg-none"></div>
 								<div className="col-lg-6 pr-60 pr-md-15">
-									<h2 className="title-color color-gray">About Us</h2>
+									<h2
+										className="title-color color-gray"
+										style={{ fontSize: "1rem", fontWeight: "700" }}
+									>
+										About Us
+									</h2>
 									<h3 className="display-3">{node.frontmatter.mainTitle}</h3>
 									<div className="space10"></div>
-									<p>{node.frontmatter.subTitle}</p>
-									<p>{node.frontmatter.subTitleTwo}</p>
-									<div dangerouslySetInnerHTML={{ __html: node.html }} />
+									<div
+										style={{ fontSize: "1rem" }}
+										dangerouslySetInnerHTML={{ __html: node.html }}
+									/>
+									<p
+										style={{
+											color: "#d8681d",
+											fontSize: "1rem",
+											fontWeight: "700"
+										}}
+									>
+										{node.frontmatter.subTitle}
+									</p>
+									<p
+										style={{
+											color: "#d8681d",
+											fontSize: "1rem",
+											fontWeight: "700"
+										}}
+									>
+										{node.frontmatter.subTitleTwo}
+									</p>
 								</div>
 							</div>
 						</div>

@@ -15,9 +15,6 @@ const SlideShow = ({ mainTitle, subTitle }) => {
 								<div className="heading-one color-dark mt-3 mb-4">
 									{mainTitle}
 								</div>
-								{/* <div className="heading-two color-dark mt-3 mb-4">
-									{subTitle}
-								</div> */}
 								<Link
 									className="btn btn-l btn-default animated-btn mb-4"
 									to="/about"
@@ -36,9 +33,6 @@ const SlideShow = ({ mainTitle, subTitle }) => {
 								<div className="heading-one color-dark mt- mb-4">
 									{subTitle}
 								</div>
-								{/* <div className="heading-two color-dark mt-3 mb-4">
-									{subTitle}
-								</div> */}
 								<Link
 									className="btn btn-l btn-default animated-btn mb-4"
 									to="/about"
