@@ -34,7 +34,10 @@ const Service = ({ serviceTitle }) => {
 	`);
 	return (
 		<div className="container mb-4">
-			<h3 className="display-3 text-center mt-4 mb-4">
+			<h3
+				className="display-3 text-center"
+				style={{ marginBottom: "8rem", marginTop: "8rem" }}
+			>
 				{serviceTitle} <br className="d-none d-lg-block" />
 			</h3>
 			<div className="row text-center">
@@ -61,7 +64,7 @@ const Service = ({ serviceTitle }) => {
 								</div>
 								<h5>{node.frontmatter.title}</h5>
 								<p>{node.frontmatter.description}</p>
-								<Link className="btn" to={node.fields.slug}>
+								<Link className="btn" to="/programs">
 									Read More
 								</Link>
 							</div>

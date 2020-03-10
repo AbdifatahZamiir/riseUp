@@ -52,11 +52,11 @@ const Event = props => {
 		<Layout>
 			<Head title="Events" />
 			<div
-				className="container gray-wrapper top-image  mt-5"
+				className=" gray-wrapper top-image"
 				style={{ paddingBottom: `15rem`, backgroundAttachment: `fixed` }}
 			>
 				<div className="container inner text-center">
-					<h1 className="page-title text-white">Events</h1>
+					<h1 className="page-title text-white">Events </h1>
 				</div>
 			</div>
 			<div className="wrapper light-wrapper">
@@ -101,15 +101,21 @@ const Event = props => {
 													<p className="badge badge-pill bg-meander">{tag}</p>
 												</div>
 												<h2 className="post-title">
-													<Link to={slug}>{title}</Link>
+													<Link style={{ boxShadow: `none` }} to={slug}>
+														{title}
+													</Link>
 												</h2>
 												<div className="post-content">
 													<p>{description}</p>
 												</div>
 												<div className="meta mb-0">
 													<span className="date">
-														<FaClock size="20px" />
-														{"  "}
+														<FaClock
+															size="19px"
+															color="d8681d"
+															className="mb-2"
+														/>
+														{"     "}
 														{publishedDate}
 													</span>
 												</div>

@@ -1,6 +1,8 @@
 ---
 templateKey: services
+counter: 2
 featuredImg: ../assets/ms-briefcase.png
+aboutImg: ../assets/about3.jpg
 title: Technology For Development
 description: Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Cras justo odio donec elit.
 ---
