@@ -33,44 +33,50 @@ const Service = ({ serviceTitle }) => {
 		}
 	`);
 	return (
-		<div className="container mb-4">
-			<h3
-				className="display-3 text-center"
-				style={{ marginBottom: "8rem", marginTop: "8rem" }}
-			>
-				{serviceTitle} <br className="d-none d-lg-block" />
-			</h3>
-			<div className="row text-center">
-				{services.allMarkdownRemark.edges.map(({ node }) => {
-					return (
-						<div className="col-md-6 col-lg-4 text-center" key={node.id}>
-							<div className="box bg-white shadow shadow-hover mb-4">
-								<div
-									className="icon icon-svg mb-4 text-center"
-									style={{ width: "20%", marginLeft: `100px` }}
-								>
-									{!!node.frontmatter.featuredImg &&
-									!!node.frontmatter.featuredImg.childImageSharp ? (
-										<Img
-											fluid={node.frontmatter.featuredImg.childImageSharp.fluid}
-											alt={node.frontmatter.title}
-										/>
-									) : (
-										<img
-											src={node.frontmatter.featuredImg.publicURL}
-											alt={node.frontmatter.title}
-										/>
-									)}{" "}
+		<div className="wrapper white-wrapper">
+			<div className="container pb-4">
+				<h3
+					className="display-3 text-center"
+					style={{ paddingBottom: "5rem", paddingTop: "5rem" }}
+				>
+					<span className=" title-underline">{serviceTitle}</span>
+				</h3>
+				<div className="row text-center">
+					{services.allMarkdownRemark.edges.map(({ node }) => {
+						return (
+							<div className="col-md-6 col-lg-4 text-center" key={node.id}>
+								<div className="box bg-white shadow shadow-hover mb-4">
+									<div
+										className="icon icon-svg mb-4 text-center"
+										style={{ width: "20%", marginLeft: `100px` }}
+									>
+										{!!node.frontmatter.featuredImg &&
+										!!node.frontmatter.featuredImg.childImageSharp ? (
+											<Img
+												fluid={
+													node.frontmatter.featuredImg.childImageSharp.fluid
+												}
+												alt={node.frontmatter.title}
+											/>
+										) : (
+											<img
+												src={node.frontmatter.featuredImg.publicURL}
+												alt={node.frontmatter.title}
+											/>
+										)}{" "}
+									</div>
+									<h5>{node.frontmatter.title}</h5>
+									<p style={{ fontSize: `.9rem` }}>
+										{node.frontmatter.description}
+									</p>
+									<Link className="btn" to="/programs">
+										Read More
+									</Link>
 								</div>
-								<h5>{node.frontmatter.title}</h5>
-								<p>{node.frontmatter.description}</p>
-								<Link className="btn" to="/programs">
-									Read More
-								</Link>
 							</div>
-						</div>
-					);
-				})}
+						);
+					})}
+				</div>
 			</div>
 		</div>
 	);

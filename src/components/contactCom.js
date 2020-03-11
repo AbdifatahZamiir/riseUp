@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 const ContactCom = ({ contactTitle }) => {
 	return (
 		<div
-			className="wrapper image-wrapper bg-auto no-overlay bg-image text-center"
+			className="wrapper  white-wrapper image-wrapper bg-auto no-overlay bg-image text-center"
 			style={{ backgroundImage: `url(${Map})` }}
 		>
 			<div className="container inner">

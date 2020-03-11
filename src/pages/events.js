@@ -25,7 +25,7 @@ const Event = props => {
 		const posts = data.allMarkdownRemark.edges || [];
 
 		const filteredData = posts.filter(post => {
-			const { description, title, tag, publishedDate } = post.node.frontmatter;
+			const { description, title, publishedDate } = post.node.frontmatter;
 			const { slug } = post.node.fields;
 			const { id } = post.node;
 			return (
@@ -33,7 +33,6 @@ const Event = props => {
 				title.toLowerCase().includes(query.toLowerCase()) ||
 				slug.toLowerCase().includes(query.toLowerCase()) ||
 				id.toLowerCase().includes(query.toLowerCase()) ||
-				tag.toLowerCase().includes(query.toLowerCase()) ||
 				publishedDate.toLowerCase().includes(query.toLowerCase())
 			);
 		});
@@ -59,7 +58,7 @@ const Event = props => {
 					<h1 className="page-title text-white">Events </h1>
 				</div>
 			</div>
-			<div className="wrapper light-wrapper">
+			<div className="wrapper white-wrapper">
 				<div className="container inner">
 					<div className="row">
 						<div className="col-lg-8">
@@ -72,7 +71,6 @@ const Event = props => {
 											featuredImg,
 											title,
 											description,
-											tag,
 											publishedDate
 										} = node.frontmatter;
 										return (
@@ -97,9 +95,6 @@ const Event = props => {
 														<h5 className="from-top mb-0">Read More</h5>
 													</figcaption>
 												</figure>
-												<div className="category">
-													<p className="badge badge-pill bg-meander">{tag}</p>
-												</div>
 												<h2 className="post-title">
 													<Link style={{ boxShadow: `none` }} to={slug}>
 														{title}
@@ -128,7 +123,7 @@ const Event = props => {
 						<aside className="col-lg-4 sidebar">
 							<div className="sidebox widget">
 								<h3 className="widget-title">Search</h3>
-								<div className="form-group has-search inner-addon left-addon">
+								<div className="form-group  has-search">
 									<span
 										className="fa fa-search form-control-feedback"
 										style={{ zIndex: `0` }}
@@ -142,10 +137,10 @@ const Event = props => {
 										/>
 									</span>
 									<input
-										className="form-control"
+										className="form-control search-input"
 										style={{ backgroundColor: `#fff`, paddingLeft: `2rem` }}
 										type="text"
-										placeholder="Search something"
+										placeholder="Search by title , date, description"
 										onChange={handleInputChange}
 									/>
 								</div>
@@ -176,7 +171,6 @@ export const query = graphql`
 					frontmatter {
 						title
 						publishedDate(formatString: "MMMM DD, YYYY")
-						tag
 						description
 						featuredImg {
 							childImageSharp {

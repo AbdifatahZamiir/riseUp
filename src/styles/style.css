@@ -78,6 +78,9 @@ address {
 .subscribe-input {
 	background: #ece913 !important;
 }
+.search-input {
+	background: #ece913 !important;
+}
 input,
 button,
 select,
@@ -801,126 +804,6 @@ hr.double {
 }
 .dropcap.circle {
 	border-radius: 50%;
-}
-/*-----------------------------------------------------------------------------------*/
-/* 	21. BADGE
-/*-----------------------------------------------------------------------------------*/
-.badge {
-	text-transform: uppercase;
-	font-size: 0.6rem;
-	line-height: 1;
-	display: inline-block;
-	font-weight: 500;
-	letter-spacing: 0.025rem;
-	padding: 0.35rem 0.7rem 0.3rem;
-	color: var(--color-white);
-}
-.badge:hover,
-.badge:focus {
-	color: var(--color-white);
-}
-.badge.bg-white {
-	color: #404040;
-}
-.category .badge {
-	margin-bottom: 1rem;
-}
-a.badge.bg-default:hover {
-	box-shadow: var(--badge-hover-default);
-}
-a.badge.bg-dark:hover {
-	box-shadow: var(--badge-hover-dark);
-}
-a.badge.bg-white:hover {
-	box-shadow: var(--badge-hover-white);
-}
-a.badge.bg-red:hover {
-	box-shadow: var(--badge-hover-red);
-}
-a.badge.bg-orange:hover {
-	box-shadow: var(--badge-hover-orange);
-}
-a.badge.bg-yellow:hover {
-	box-shadow: var(--badge-hover-yellow);
-}
-a.badge.bg-green:hover {
-	box-shadow: var(--badge-hover-green);
-}
-a.badge.bg-leaf:hover {
-	box-shadow: var(--badge-hover-leaf);
-}
-a.badge.bg-teal:hover {
-	box-shadow: var(--badge-hover-teal);
-}
-a.badge.bg-aqua:hover {
-	box-shadow: var(--badge-hover-aqua);
-}
-a.badge.bg-meander:hover {
-	box-shadow: var(--badge-hover-meander);
-}
-a.badge.bg-blue:hover {
-	box-shadow: var(--badge-hover-blue);
-}
-a.badge.bg-cobalt:hover {
-	box-shadow: var(--badge-hover-cobalt);
-}
-a.badge.bg-sky:hover {
-	box-shadow: var(--badge-hover-sky);
-}
-a.badge.bg-purple:hover {
-	box-shadow: var(--badge-hover-purple);
-}
-a.badge.bg-violet:hover {
-	box-shadow: var(--badge-hover-violet);
-}
-a.badge.bg-pink:hover {
-	box-shadow: var(--badge-hover-pink);
-}
-a.badge.bg-rose:hover {
-	box-shadow: var(--badge-hover-rose);
-}
-a.badge.bg-hibiscus:hover {
-	box-shadow: var(--badge-hover-hibiscus);
-}
-a.badge.bg-brown:hover {
-	box-shadow: var(--badge-hover-brown);
-}
-/*-----------------------------------------------------------------------------------*/
-/* 	22. ALERT
-/*-----------------------------------------------------------------------------------*/
-.alert {
-	border: 0;
-	padding: 1rem 1.25rem;
-}
-.alert-dismissible {
-	padding-right: 4rem;
-}
-.alert-link {
-	font-weight: 500;
-}
-button.close {
-	-webkit-transition: all 150ms ease-in-out;
-	-o-transition: all 150ms ease-in-out;
-	transition: all 150ms ease-in-out;
-	cursor: pointer;
-	text-shadow: none;
-	font-weight: normal;
-}
-button.close span {
-	display: none;
-}
-button.close:before {
-	font-family: "Jam";
-	content: "\ea05";
-	vertical-align: middle;
-	display: table-cell;
-	font-size: 1.2rem;
-	vertical-align: 1px;
-}
-.alert-dismissible button.close {
-	padding: 0 1rem 0 0;
-	top: 50%;
-	transform: translateY(-50%);
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -2661,10 +2544,6 @@ textarea.error {
 	font-weight: 600;
 	animation: moveInLeft 1.5s ease-out;
 }
-.heading-two {
-	font-size: 1.5em;
-	animation: moveInRight 1.5s ease-out;
-}
 
 .size-pic {
 	width: 25.5rem;
@@ -2683,10 +2562,14 @@ textarea.error {
 	.heading-con {
 		margin-top: 30px;
 	}
-	.heading-two {
-		font-size: 1em;
-		animation: moveInRight 1s ease-out;
+	.heading-one {
+		font-size: 1.2em;
+		letter-spacing: 0.4px;
+		line-height: 40px;
+		font-weight: 600;
+		animation: moveInLeft 1.5s ease-out;
 	}
+
 	.r-pic {
 		display: none;
 	}
@@ -2698,11 +2581,14 @@ textarea.error {
 }
 @media (min-width: 504px) and (max-width: 1326px) {
 	.heading-con {
-		margin-top: 10px;
+		margin-top: 50px;
 	}
-	.heading-two {
-		font-size: 1.2em;
-		animation: moveInRight 1s ease-out;
+	.heading-one {
+		font-size: 1.1em;
+		letter-spacing: 0.5px;
+		line-height: 40px;
+		font-weight: 600;
+		animation: moveInLeft 1.5s ease-out;
 	}
 	.size-pic {
 		width: 20rem;
@@ -2802,3 +2688,7 @@ textarea.error {
 .carousel-inner .active {
 	opacity: 1;
 } */
+
+.title-underline {
+	border-bottom: 2px solid #d8681d;
+}

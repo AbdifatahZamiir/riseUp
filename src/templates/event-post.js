@@ -17,7 +17,7 @@ export const EventTemplate = ({ data }) => {
 					<h1 className="page-title text-white">Event Details</h1>
 				</div>
 			</div>
-			<div className="wrapper light-wrapper">
+			<div className="wrapper white-wrapper">
 				<div className="container inner">
 					<div className="row">
 						<div className="col-lg-8">
@@ -42,11 +42,6 @@ export const EventTemplate = ({ data }) => {
 												/>
 											)}
 										</figure>
-										<div className="category">
-											<a href="/" className="badge badge-pill bg-meander">
-												{data.frontmatter.tag}
-											</a>
-										</div>
 										<h2 className="post-title">{data.frontmatter.title}</h2>
 										<div dangerouslySetInnerHTML={{ __html: data.html }} />
 									</div>
@@ -80,7 +75,6 @@ export const pageQuery = graphql`
 			frontmatter {
 				publishedDate(formatString: "dddd, MMMM Do YYYY, h:mm:ss a")
 				title
-				tag
 				featuredImg {
 					childImageSharp {
 						fluid(maxWidth: 100) {

@@ -20,7 +20,6 @@ const LatestEvent = () => {
 						frontmatter {
 							title
 							publishedDate(formatString: "MMMM DD, YYYY")
-							tag
 							description
 							featuredImg {
 								childImageSharp {
@@ -38,13 +37,13 @@ const LatestEvent = () => {
 	`);
 
 	return (
-		<div className="wrapper light-wrapper">
+		<div className="wrapper white-wrapper">
 			<div className="container inner">
 				<h3
 					className="display-3 text-center mt-4"
-					style={{ marginBottom: "8rem" }}
+					style={{ paddingBottom: "5rem" }}
 				>
-					Latest Events
+					<span className="title-underline">Latest Events </span>
 				</h3>
 				<div className="row">
 					<div className="blog grid grid-view">
@@ -52,12 +51,7 @@ const LatestEvent = () => {
 							{allPosts.allMarkdownRemark.edges.map(({ node }) => {
 								const { id } = node;
 								const { slug } = node.fields;
-								const {
-									featuredImg,
-									title,
-									tag,
-									publishedDate
-								} = node.frontmatter;
+								const { featuredImg, title, publishedDate } = node.frontmatter;
 								return (
 									<div
 										className="item post grid-sizer col-md-4 col-lg-4"
@@ -83,9 +77,6 @@ const LatestEvent = () => {
 												<h5 className="from-top mb-0">Read More</h5>
 											</figcaption>
 										</figure>
-										<div className="category">
-											<p className="badge badge-pill bg-meander">{tag}</p>
-										</div>
 										<h2 className="post-title">
 											<Link style={{ boxShadow: `none` }} to={slug}>
 												{title}

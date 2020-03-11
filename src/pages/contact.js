@@ -18,7 +18,7 @@ const Contact = () => {
 					<h1 className="page-title text-white">Contact Us</h1>
 				</div>
 			</div>
-			<div className="wrapper">
+			<div className="wrapper white-wrapper">
 				<div className="container inner">
 					<div className="row text-center gutter-60">
 						<div className="col-md-4">

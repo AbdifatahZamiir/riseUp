@@ -78,6 +78,7 @@ const NavLinks = styled.ul`
 		text-transform: uppercase;
 		text-decoration: none;
 		cursor: pointer;
+		-webkit-box-shadow: none;
 
 		&:hover {
 			color: #fdcb6e;

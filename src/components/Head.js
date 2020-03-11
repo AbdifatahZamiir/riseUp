@@ -17,6 +17,12 @@ const Head = ({ title }) => {
 
 	return (
 		<Helmet title={`${title} | ${data.site.siteMetadata.title}`}>
+			{
+				<meta
+					property="og:url"
+					content="https://fonts.googleapis.com/css?family=Lato&display=swap"
+				/>
+			}
 			{title && (
 				<meta property="og:title" content={data.site.siteMetadata.title} />
 			)}{" "}

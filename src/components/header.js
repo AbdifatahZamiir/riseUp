@@ -14,7 +14,7 @@ class Header extends Component {
 
 	render() {
 		return (
-			<Fragment className="container">
+			<Fragment>
 				<Navbar
 					navbarState={this.state.navbarOpen}
 					handleNavbar={this.handleNavbar}
