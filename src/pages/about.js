@@ -3,7 +3,10 @@ import { graphql } from "gatsby";
 import About3 from "../images/concept/concept22.png";
 import Layout from "../components/layout";
 import Team from "../components/team";
+//import Services from "../components/services";
 import Head from "../components/Head";
+
+
 
 const AboutPage = props => {
 	const { data } = props;
@@ -88,6 +91,7 @@ const AboutPage = props => {
 				);
 			})}
 			<Team />
+	
 		</Layout>
 	);
 };
