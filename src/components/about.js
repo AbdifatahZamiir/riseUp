@@ -56,7 +56,7 @@ const About = () => {
 						return (
 							<div className="col-lg-6 pr-60 pr-md-15" key={id}>
 								<h2
-									className="title-color color-gray"
+									className="title-color color-gray title-underline"
 									style={{ fontSize: "1rem", fontWeight: "700" }}
 								>
 									About Us
