@@ -74,7 +74,7 @@ const NavLinks = styled.ul`
 	& a {
 		font-size: 0.9rem;
 		line-height: 2;
-		color: #2d3436;
+		color: #000;
 		text-transform: uppercase;
 		text-decoration: none;
 		cursor: pointer;
