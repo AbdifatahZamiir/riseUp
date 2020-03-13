@@ -414,6 +414,27 @@ canvas {
 	box-shadow: none;
 	display: inline-block;
 }
+.pagination-btn {
+	color: #fff !important;
+	background: var(--color-default);
+	border: 0.5px solid #d8681d;
+	margin-bottom: 0.5rem;
+	margin-right: 0.25rem;
+	padding: 0.9rem 1.3rem 0.8rem;
+	font-size: 0.65rem;
+	letter-spacing: 0.025rem;
+	text-transform: uppercase;
+	font-weight: 500;
+	line-height: 1;
+	border-radius: 0.1rem;
+	text-shadow: none;
+	-webkit-transition: all 300ms ease-in-out;
+	-o-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	display: inline-block;
+}
 
 .btn-icon i {
 	vertical-align: -1px;
@@ -429,6 +450,12 @@ canvas {
 }
 .btn:focus {
 	color: var(--color-white);
+	box-shadow: inherit;
+}
+.pagination-btn:hover {
+	background-color: #d8681d;
+}
+.pagination-btn:focus {
 	box-shadow: inherit;
 }
 .btn:hover,
@@ -2594,6 +2621,9 @@ textarea.error {
 		width: 20rem;
 		margin-top: 30px;
 	}
+}
+.active button {
+	background-color: #ece913 !important;
 }
 
 @keyframes moveInLeft {

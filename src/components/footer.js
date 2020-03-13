@@ -75,8 +75,8 @@ const Footer = () => {
 							<div className="space10"></div>
 							<div className="newsletter-wrapper">
 								<form
-									action=""
 									method="post"
+									action="https://formspree.io/abdifatahzammiir@gmail.com"
 									id="mc-embedded-subscribe-form"
 									name="mc-embedded-subscribe-form"
 									className="validate"
@@ -84,8 +84,13 @@ const Footer = () => {
 								>
 									<div id="mc_embed_signup_scroll" className="input-group">
 										<input
+											type="text"
+											name="_gotcha"
+											style={{ display: `none` }}
+										/>
+										<input
 											type="email"
-											name="EMAIL"
+											name="_replyto"
 											className="email subscribe-input  form-control mb-0 mr-2 mb-sm-0"
 											id="mce-EMAIL"
 											placeholder="Email Address"

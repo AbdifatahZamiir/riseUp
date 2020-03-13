@@ -63,12 +63,32 @@ module.exports = {
 				icon: `content/assets/logo.png`
 			}
 		},
+		{
+			resolve: `gatsby-plugin-nprogress`,
+			options: {
+				// Setting a color is optional.
+				color: `#d8681d`,
+				// Disable the loading spinner.
+				showSpinner: false
+			}
+		},
+		{
+			resolve: "gatsby-plugin-page-progress",
+			options: {
+				includePaths: ["/", { regex: "^/events" }],
+				excludePaths: ["/events/beep-beep-lettuce"],
+				height: 3,
+				prependToBody: false,
+				color: `#d8681d`
+			}
+		},
 		`gatsby-plugin-react-helmet`,
 		{
 			resolve: `gatsby-plugin-typography`,
 			options: {
 				pathToConfigModule: `src/utils/typography`
 			}
-		} // To learn more, visit: https://gatsby.dev/offline // this (optional) plugin enables Progressive Web App + Offline functionality
+		}, // To learn more, visit: https://gatsby.dev/offline // this (optional) plugin enables Progressive Web App + Offline functionality
+		`gatsby-plugin-offline`
 	]
 };
