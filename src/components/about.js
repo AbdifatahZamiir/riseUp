@@ -56,10 +56,10 @@ const About = () => {
 						return (
 							<div className="col-lg-6 pr-60 pr-md-15" key={id}>
 								<h2
-									className="title-color color-gray title-underline"
+									className="title-color color-gray"
 									style={{ fontSize: "1rem", fontWeight: "700" }}
 								>
-									About Us
+									<span className="title-underline">About Us</span>
 								</h2>
 								<h3 className="display-3">{mainTitle}</h3>
 								<p style={{ fontSize: `1rem`, letterSpacing: `.01rem` }}>
