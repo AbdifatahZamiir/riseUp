@@ -29,7 +29,12 @@ const Footer = () => {
 								<br className="d-none d-lg-block" /> Jigjiga – Expecting
 								<br className="d-none d-lg-block" /> to expand to Addis Ababa.
 							</address>
-							<a href="mailto:first.last@email.com">info@email.com</a>
+							<a
+								href="mailto:first.last@email.com"
+								style={{ boxShadow: `none` }}
+							>
+								info@email.com
+							</a>
 							<br /> +00 (123) 456 78 90
 						</div>
 					</div>
