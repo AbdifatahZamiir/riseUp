@@ -1,8 +1,8 @@
 module.exports = {
 	siteMetadata: {
 		title: `Rise Up Unleashing Ideas`,
-		description: `Rise up website .`,
-		myWebUrl: `riseup.com`
+		description: `Rise up website riseup unleasing ideas employment enterprenuership startups .`,
+		myWebUrl: `riseup-et.com`
 	},
 	plugins: [
 		`gatsby-plugin-sharp`,
@@ -54,8 +54,8 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {
-				name: `Gatsby Starter Blog`,
-				short_name: `GatsbyJS`,
+				name: `Riseup unleashing ideas`,
+				short_name: `Riseup`,
 				start_url: `/`,
 				background_color: `#ffffff`,
 				theme_color: `#d8681d`,
@@ -83,7 +83,6 @@ module.exports = {
 			}
 		},
 		`gatsby-plugin-react-helmet`,
-		`gatsby-theme-elements`,
 		{
 			resolve: `gatsby-plugin-typography`,
 			options: {
