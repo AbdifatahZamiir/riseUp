@@ -4,7 +4,7 @@ import ImageTwo from "../images/par2.jpg";
 
 const Slider = ({ partnerTitle }) => {
 	return (
-		<div className="wrapper white-wrapper">
+		<div className="wrapper white-wrapper pt-5">
 			<div className="container inne pb-4">
 				<h3 className="display-3 text-center" style={{ paddingBottom: "5rem" }}>
 					<span className="title-underline">{partnerTitle}</span>
