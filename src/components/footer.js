@@ -39,7 +39,7 @@ const Footer = () => {
 							<ul className="list-unstyled">
 								<li>
 									<Link
-										style={{ textDecoration: `none` }}
+										style={{ boxShadow: `none` }}
 										to="/about"
 										className="nocolor"
 									>
@@ -47,17 +47,29 @@ const Footer = () => {
 									</Link>
 								</li>
 								<li>
-									<Link to="/contact" className="nocolor">
+									<Link
+										style={{ boxShadow: `none` }}
+										to="/contact"
+										className="nocolor"
+									>
 										Contact Us
 									</Link>
 								</li>
 								<li>
-									<Link to="/events" className="nocolor">
+									<Link
+										style={{ boxShadow: `none` }}
+										to="/events"
+										className="nocolor"
+									>
 										Events
 									</Link>
 								</li>
 								<li>
-									<Link to="/programs" className="nocolor">
+									<Link
+										style={{ boxShadow: `none` }}
+										to="/programs"
+										className="nocolor"
+									>
 										Our Programs
 									</Link>
 								</li>
