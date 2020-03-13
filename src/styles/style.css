@@ -417,7 +417,7 @@ canvas {
 .pagination-btn {
 	color: #fff !important;
 	background: var(--color-default);
-	border: 0.5px solid #d8681d;
+	/* border: 0px solid #d8681d; */
 	margin-bottom: 0.5rem;
 	margin-right: 0.25rem;
 	padding: 0.9rem 1.3rem 0.8rem;
@@ -426,7 +426,6 @@ canvas {
 	text-transform: uppercase;
 	font-weight: 500;
 	line-height: 1;
-	border-radius: 0.1rem;
 	text-shadow: none;
 	-webkit-transition: all 300ms ease-in-out;
 	-o-transition: all 300ms ease-in-out;
