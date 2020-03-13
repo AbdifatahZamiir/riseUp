@@ -35,7 +35,7 @@ const Team = () => {
 			<div className="container inner">
 				<h2 className="section-title text-center">Meet the Team</h2>
 				<p className="lead larger text-center">
-					Save your time and money by choosing our professional team.
+					We are made up of industry expertise and innovators.
 				</p>
 				<div className="grid-view">
 					<div className="row  gap-small text-center">

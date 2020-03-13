@@ -45,11 +45,11 @@ const Contact = () => {
 							</div>
 							<p className="mb-0">
 								<a className="nocolor" href="mailto:#">
-									manager@email.com
+									info@riseup-et.com
 								</a>
 								<br />
 								<a className="nocolor" href="mailto:#">
-									asistant@email.com
+									wwww.riseup-et.com 
 								</a>
 							</p>
 						</div>
