@@ -21,8 +21,8 @@ export const IndexPageTemplate = ({
 		<SlideShow mainTitle={mainTitle} subTitle={subTitle} />
 		<About />
 		<Service serviceTitle={serviceTitle} />
-		<ContactCom contactTitle={contactTitle} />
 		<LatestEvent />
+		<ContactCom contactTitle={contactTitle} />
 		<Slider partnerTitle={partnerTitle} />
 	</Fragment>
 );

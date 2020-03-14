@@ -59,7 +59,7 @@ const About = () => {
 									className="title-color color-gray"
 									style={{ fontSize: "1rem", fontWeight: "700" }}
 								>
-									About Us
+									<span className="title-underline">About Us</span>
 								</h2>
 								<h3 className="display-3">{mainTitle}</h3>
 								<p style={{ fontSize: `1rem`, letterSpacing: `.01rem` }}>

@@ -1,8 +1,8 @@
 module.exports = {
 	siteMetadata: {
 		title: `Rise Up Unleashing Ideas`,
-		description: `Rise up website .`,
-		myWebUrl: `riseup.com`
+		description: `Rise up website riseup unleasing ideas employment enterprenuership startups .`,
+		myWebUrl: `riseup-et.com`
 	},
 	plugins: [
 		`gatsby-plugin-sharp`,
@@ -54,13 +54,32 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {
-				name: `Gatsby Starter Blog`,
-				short_name: `GatsbyJS`,
+				name: `Riseup unleashing ideas`,
+				short_name: `Riseup`,
 				start_url: `/`,
 				background_color: `#ffffff`,
-				theme_color: `#663399`,
+				theme_color: `#d8681d`,
 				display: `minimal-ui`,
 				icon: `content/assets/logo.png`
+			}
+		},
+		{
+			resolve: `gatsby-plugin-nprogress`,
+			options: {
+				// Setting a color is optional.
+				color: `#ece913`,
+				// Disable the loading spinner.
+				showSpinner: false
+			}
+		},
+		{
+			resolve: "gatsby-plugin-page-progress",
+			options: {
+				includePaths: ["/", { regex: "^/events" }],
+				excludePaths: ["/events/beep-beep-lettuce"],
+				height: 3,
+				prependToBody: false,
+				color: `#d8681d`
 			}
 		},
 		`gatsby-plugin-react-helmet`,
@@ -69,6 +88,7 @@ module.exports = {
 			options: {
 				pathToConfigModule: `src/utils/typography`
 			}
-		} // To learn more, visit: https://gatsby.dev/offline // this (optional) plugin enables Progressive Web App + Offline functionality
+		}, // To learn more, visit: https://gatsby.dev/offline // this (optional) plugin enables Progressive Web App + Offline functionality
+		`gatsby-plugin-offline`
 	]
 };

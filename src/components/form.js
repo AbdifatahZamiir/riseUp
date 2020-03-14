@@ -1,36 +1,6 @@
-import React, { useState } from "react";
-import axios from "axios";
+import React from "react";
 
 const Form = () => {
-	const [serverState, setServerState] = useState({
-		submitting: false,
-		status: null
-	});
-	const handleServerResponse = (ok, msg, form) => {
-		setServerState({
-			submitting: false,
-			status: { ok, msg }
-		});
-		if (ok) {
-			form.reset();
-		}
-	};
-	const handleOnSubmit = e => {
-		e.preventDefault();
-		const form = e.target;
-		setServerState({ submitting: true });
-		axios({
-			method: "post",
-			url: "https://getform.io/f/7c39b55c-d056-4537-91e5-52203f3d1bfa",
-			data: new FormData(form)
-		})
-			.then(r => {
-				handleServerResponse(true, "Thanks!", form);
-			})
-			.catch(r => {
-				handleServerResponse(false, r.response.data.error, form);
-			});
-	};
 	return (
 		<div className="wrapper light-wrapper">
 			<div className="container inner">
@@ -38,7 +8,7 @@ const Form = () => {
 					<div className="col-md-12 col-lg-12 ">
 						<h2 className="section-title text-center pb-5">Drop Us a Line</h2>
 						<div className="space30"></div>
-						<form id="contact-form" method="POST" onSubmit={handleOnSubmit}>
+						<form id="contact-form">
 							<div className="messages"></div>
 							<div className="controls">
 								<div className="form-row">
@@ -124,13 +94,7 @@ const Form = () => {
 											type="submit"
 											className="btn btn-send"
 											value="Send message"
-											disabled={serverState.submitting}
 										/>
-										{serverState.status && (
-											<p className={!serverState.status.ok ? "errorMsg" : ""}>
-												{serverState.status.msg}
-											</p>
-										)}
 									</div>
 								</div>
 								<div className="form-row">

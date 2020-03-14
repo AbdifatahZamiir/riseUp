@@ -29,7 +29,7 @@ const Footer = () => {
 								<br className="d-none d-lg-block" /> Jigjiga – Expecting
 								<br className="d-none d-lg-block" /> to expand to Addis Ababa.
 							</address>
-							<a href="mailto:first.last@email.com">info@email.com</a>
+							<span style={{ boxShadow: `none` }}>info@riseup-et.com</span>
 							<br /> +00 (123) 456 78 90
 						</div>
 					</div>
@@ -39,7 +39,7 @@ const Footer = () => {
 							<ul className="list-unstyled">
 								<li>
 									<Link
-										style={{ textDecoration: `none` }}
+										style={{ boxShadow: `none` }}
 										to="/about"
 										className="nocolor"
 									>
@@ -47,17 +47,29 @@ const Footer = () => {
 									</Link>
 								</li>
 								<li>
-									<Link to="/contact" className="nocolor">
+									<Link
+										style={{ boxShadow: `none` }}
+										to="/contact"
+										className="nocolor"
+									>
 										Contact Us
 									</Link>
 								</li>
 								<li>
-									<Link to="/events" className="nocolor">
+									<Link
+										style={{ boxShadow: `none` }}
+										to="/events"
+										className="nocolor"
+									>
 										Events
 									</Link>
 								</li>
 								<li>
-									<Link to="/programs" className="nocolor">
+									<Link
+										style={{ boxShadow: `none` }}
+										to="/programs"
+										className="nocolor"
+									>
 										Our Programs
 									</Link>
 								</li>
@@ -75,8 +87,8 @@ const Footer = () => {
 							<div className="space10"></div>
 							<div className="newsletter-wrapper">
 								<form
-									action=""
 									method="post"
+									action="https://formspree.io/abdifatahzammiir@gmail.com"
 									id="mc-embedded-subscribe-form"
 									name="mc-embedded-subscribe-form"
 									className="validate"
@@ -84,8 +96,13 @@ const Footer = () => {
 								>
 									<div id="mc_embed_signup_scroll" className="input-group">
 										<input
+											type="text"
+											name="_gotcha"
+											style={{ display: `none` }}
+										/>
+										<input
 											type="email"
-											name="EMAIL"
+											name="_replyto"
 											className="email subscribe-input  form-control mb-0 mr-2 mb-sm-0"
 											id="mce-EMAIL"
 											placeholder="Email Address"

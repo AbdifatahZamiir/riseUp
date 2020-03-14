@@ -33,7 +33,7 @@ const Service = ({ serviceTitle }) => {
 		}
 	`);
 	return (
-		<div className="wrapper white-wrapper">
+		<div className="wrapper light-wrapper">
 			<div className="container pb-4">
 				<h3
 					className="display-3 text-center"
