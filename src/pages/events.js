@@ -49,13 +49,13 @@ const Event = props => {
 
 	return (
 		<Layout>
-			<Head title="Events" />
+			<Head title="Projects" />
 			<div
 				className=" gray-wrapper top-image"
 				style={{ paddingBottom: `15rem`, backgroundAttachment: `fixed` }}
 			>
 				<div className="container inner text-center">
-					<h1 className="page-title text-white">Events </h1>
+					<h1 className="page-title text-white">Projects </h1>
 				</div>
 			</div>
 			<div className="wrapper white-wrapper">

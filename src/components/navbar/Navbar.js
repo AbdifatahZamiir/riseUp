@@ -28,8 +28,8 @@ const Navbar = props => {
 					<NavLinks style={linkAnimation}>
 						<Link to="/">Home</Link>
 						<Link to="/about">About Us</Link>
-						<Link to="/programs">Programs</Link>
-						<Link to="/events">Events</Link>
+						<Link to="/programs">Our Focus</Link>
+						<Link to="/events">Projects</Link>
 						<Link to="/contact" className="btn">
 							Contact Us
 						</Link>

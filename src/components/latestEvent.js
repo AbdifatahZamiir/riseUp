@@ -43,7 +43,7 @@ const LatestEvent = () => {
 					className="display-3 text-center mt-4"
 					style={{ paddingBottom: "5rem" }}
 				>
-					<span className="title-underline">Latest Events </span>
+					<span className="title-underline">Current Projects </span>
 				</h3>
 				<div className="row">
 					<div className="blog grid grid-view">

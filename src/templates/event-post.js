@@ -14,7 +14,7 @@ export const EventTemplate = ({ data }) => {
 				style={{ paddingBottom: `15rem`, backgroundAttachment: `fixed` }}
 			>
 				<div className="container inner text-center">
-					<h1 className="page-title text-white">Event Details</h1>
+					<h1 className="page-title text-white">Project Details</h1>
 				</div>
 			</div>
 			<div className="wrapper white-wrapper">
