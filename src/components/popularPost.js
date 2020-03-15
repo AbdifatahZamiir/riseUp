@@ -37,7 +37,7 @@ const Popular = () => {
 
 	return (
 		<div className="sidebox widget">
-			<h3 className="widget-title">Popular Posts</h3>
+			<h3 className="widget-title">Popular Projects</h3>
 			<ul className="image-list">
 				{allPosts.allMarkdownRemark.edges.map(({ node }) => {
 					const { id } = node;
