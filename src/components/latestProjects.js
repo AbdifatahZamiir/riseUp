@@ -3,11 +3,11 @@ import { useStaticQuery, graphql, Link } from "gatsby";
 import Img from "gatsby-image";
 import { FaClock } from "react-icons/fa";
 
-const LatestEvent = () => {
+const LatestProject = () => {
 	const allPosts = useStaticQuery(graphql`
 		query {
 			allMarkdownRemark(
-				filter: { frontmatter: { templateKey: { eq: "event-post" } } }
+				filter: { frontmatter: { templateKey: { eq: "project-post" } } }
 				sort: { fields: frontmatter___publishedDate, order: DESC }
 				limit: 3
 			) {
@@ -94,4 +94,4 @@ const LatestEvent = () => {
 	);
 };
 
-export default LatestEvent;
+export default LatestProject;

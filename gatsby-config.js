@@ -75,8 +75,8 @@ module.exports = {
 		{
 			resolve: "gatsby-plugin-page-progress",
 			options: {
-				includePaths: ["/", { regex: "^/events" }],
-				excludePaths: ["/events/beep-beep-lettuce"],
+				includePaths: ["/", { regex: "^/projects" }],
+				excludePaths: ["/projects/beep-beep-lettuce"],
 				height: 3,
 				prependToBody: false,
 				color: `#d8681d`

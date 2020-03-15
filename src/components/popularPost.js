@@ -7,7 +7,7 @@ const Popular = () => {
 	const allPosts = useStaticQuery(graphql`
 		query {
 			allMarkdownRemark(
-				filter: { frontmatter: { templateKey: { eq: "event-post" } } }
+				filter: { frontmatter: { templateKey: { eq: "project-post" } } }
 				sort: { fields: frontmatter___publishedDate, order: DESC }
 				limit: 4
 			) {

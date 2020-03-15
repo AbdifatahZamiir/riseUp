@@ -7,7 +7,7 @@ import ContactCom from "../components/contactCom";
 import Slider from "../components/slider";
 import About from "../components/about";
 import Head from "../components/Head";
-import LatestEvent from "../components/latestEvent";
+import LatestProject from "../components/latestProjects";
 
 export const IndexPageTemplate = ({
 	mainTitle,
@@ -21,7 +21,7 @@ export const IndexPageTemplate = ({
 		<SlideShow mainTitle={mainTitle} subTitle={subTitle} />
 		<About />
 		<Service serviceTitle={serviceTitle} />
-		<LatestEvent />
+		<LatestProject />
 		<ContactCom contactTitle={contactTitle} />
 		<Slider partnerTitle={partnerTitle} />
 	</Fragment>

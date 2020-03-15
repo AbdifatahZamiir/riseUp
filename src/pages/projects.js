@@ -8,7 +8,7 @@ import { FaClock, FaSearch } from "react-icons/fa";
 import Head from "../components/Head";
 import Popular from "../components/popularPost";
 
-class Events extends Component {
+class Projects extends Component {
 	state = {
 		posts: [],
 		pageSize: 4,
@@ -43,21 +43,6 @@ class Events extends Component {
 		return { totalCount: filtered.length, data: posts };
 	};
 
-<<<<<<< HEAD
-	const { filteredData, query } = state;
-	const hasSearchResults = filteredData && query !== emptyQuery;
-	const posts = hasSearchResults ? filteredData : allPosts;
-
-	return (
-		<Layout>
-			<Head title="Projects" />
-			<div
-				className=" gray-wrapper top-image"
-				style={{ paddingBottom: `15rem`, backgroundAttachment: `fixed` }}
-			>
-				<div className="container inner text-center">
-					<h1 className="page-title text-white">Projects </h1>
-=======
 	render() {
 		const { currentPage, pageSize, searchQuery } = this.state;
 		const { totalCount, data: posts } = this.getPagedData();
@@ -69,9 +54,8 @@ class Events extends Component {
 					style={{ paddingBottom: `15rem`, backgroundAttachment: `fixed` }}
 				>
 					<div className="container inner text-center">
-						<h1 className="page-title text-white">Events </h1>
+						<h1 className="page-title text-white">Projects </h1>
 					</div>
->>>>>>> 3468b8690b8cc5e93128286ff668ee779041cf94
 				</div>
 				<div className="wrapper white-wrapper">
 					<div className="container inner">
@@ -178,11 +162,11 @@ class Events extends Component {
 	}
 }
 
-export default Events;
+export default Projects;
 export const query = graphql`
 	query {
 		allMarkdownRemark(
-			filter: { frontmatter: { templateKey: { eq: "event-post" } } }
+			filter: { frontmatter: { templateKey: { eq: "project-post" } } }
 			sort: { fields: frontmatter___publishedDate, order: DESC }
 		) {
 			edges {

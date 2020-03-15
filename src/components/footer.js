@@ -58,10 +58,10 @@ const Footer = () => {
 								<li>
 									<Link
 										style={{ boxShadow: `none` }}
-										to="/events"
+										to="/projects"
 										className="nocolor"
 									>
-										Events
+										Projects
 									</Link>
 								</li>
 								<li>
@@ -70,7 +70,7 @@ const Footer = () => {
 										to="/programs"
 										className="nocolor"
 									>
-										Our Programs
+										Our Focus
 									</Link>
 								</li>
 							</ul>

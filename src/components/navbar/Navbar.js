@@ -29,7 +29,7 @@ const Navbar = props => {
 						<Link to="/">Home</Link>
 						<Link to="/about">About Us</Link>
 						<Link to="/programs">Our Focus</Link>
-						<Link to="/events">Projects</Link>
+						<Link to="/projects">Projects</Link>
 						<Link to="/contact" className="btn">
 							Contact Us
 						</Link>

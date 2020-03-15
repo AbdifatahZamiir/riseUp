@@ -5,8 +5,7 @@ import Layout from "../components/layout";
 import Team from "../components/team";
 //import Services from "../components/services";
 import Head from "../components/Head";
-
-
+import Service from "../components/services";
 
 const AboutPage = props => {
 	const { data } = props;
@@ -90,8 +89,8 @@ const AboutPage = props => {
 					</div>
 				);
 			})}
+			<Service />
 			<Team />
-	
 		</Layout>
 	);
 };
