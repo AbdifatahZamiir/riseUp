@@ -1,7 +1,7 @@
 ---
 templateKey: project-post
 title: Tech Startup Accelerator
-description: ur tech startup accelerator is designed to harness the power of technology to create solution for all sorts of problems,
+description: Our tech startup accelerator is designed to harness the power of technology to create solution for all sorts of problems,
 featuredImg: "../assets/b5.jpg"
 publishedDate: 2020-07-01T22:12:03.284Z
 ---

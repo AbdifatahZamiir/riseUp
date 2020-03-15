@@ -1,7 +1,7 @@
 ---
 templateKey: project-post
 title: Riseup Business Bootcamp
-description: thiopia has one of the fastest growing economies in the world. Small enterprise are major
+description: Ethiopia has one of the fastest growing economies in the world. Small enterprise are major
 featuredImg: "../assets/b2.jpg"
 publishedDate: 2020-05-21T08:18:14.191Z
 ---
