@@ -61,7 +61,7 @@ const Footer = () => {
 										to="/events"
 										className="nocolor"
 									>
-										Events
+										Projects
 									</Link>
 								</li>
 								<li>

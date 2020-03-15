@@ -1,7 +1,7 @@
 ---
 templateKey: event-post
 title: Tech Startup Accelerator 
-description: ur tech startup accelerator is designed to harness the power of technology to create solution for all sorts of problems, 
+description: Our tech startup accelerator is designed to harness the power of technology to create solution for all sorts of problems, 
 title: New branch of riseup opened at adisababa.
 description: Mauris convallis non ligula non interdum. Gravida vulputate convallis vestibulum. Cras imperdiet nun eu dolor vestibulum ultrices diam tempus.
 featuredImg: "../assets/b5.jpg"
