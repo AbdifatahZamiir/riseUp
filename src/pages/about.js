@@ -18,12 +18,9 @@ const AboutPage = props => {
 				className=" gray-wrapper top-image"
 				style={{ paddingBottom: `15rem`, backgroundAttachment: `fixed` }}
 			>
-				<h3
-					className="display-3 text-center"
-					style={{ paddingBottom: "5rem", paddingTop: "5rem" }}
-				>
-					<span className=" title-underline">Our Focus</span>
-				</h3>
+				<div className="container inner text-center">
+					<h1 className="page-title text-white">About Us</h1>
+				</div>
 			</div>
 			{allPosts.map(({ node }) => {
 				return (
@@ -92,7 +89,7 @@ const AboutPage = props => {
 					</div>
 				);
 			})}
-			<Service />
+			<Service serviceTitle="Our Focus" />
 			<Team />
 		</Layout>
 	);

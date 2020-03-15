@@ -39,7 +39,9 @@ const Service = ({ serviceTitle }) => {
 					className="display-3 text-center"
 					style={{ paddingBottom: "5rem", paddingTop: "5rem" }}
 				>
-					<span className=" title-underline">{serviceTitle}</span>
+					<span className=" title-underline">
+						{serviceTitle || this.props.serviceTitle}
+					</span>
 				</h3>
 				<div className="row text-center">
 					{services.allMarkdownRemark.edges.map(({ node }) => {
