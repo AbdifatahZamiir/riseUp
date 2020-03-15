@@ -43,35 +43,19 @@ class Events extends Component {
 		return { totalCount: filtered.length, data: posts };
 	};
 
-<<<<<<< HEAD
-	const { filteredData, query } = state;
-	const hasSearchResults = filteredData && query !== emptyQuery;
-	const posts = hasSearchResults ? filteredData : allPosts;
-
-	return (
-		<Layout>
-			<Head title="Projects" />
-			<div
-				className=" gray-wrapper top-image"
-				style={{ paddingBottom: `15rem`, backgroundAttachment: `fixed` }}
-			>
-				<div className="container inner text-center">
-					<h1 className="page-title text-white">Projects </h1>
-=======
 	render() {
 		const { currentPage, pageSize, searchQuery } = this.state;
 		const { totalCount, data: posts } = this.getPagedData();
 		return (
 			<Layout>
-				<Head title="Events" />
+				<Head title="Current Projects" />
 				<div
 					className=" gray-wrapper top-image"
 					style={{ paddingBottom: `15rem`, backgroundAttachment: `fixed` }}
 				>
 					<div className="container inner text-center">
-						<h1 className="page-title text-white">Events </h1>
+						<h1 className="page-title text-white">Current Projects </h1>
 					</div>
->>>>>>> 3468b8690b8cc5e93128286ff668ee779041cf94
 				</div>
 				<div className="wrapper white-wrapper">
 					<div className="container inner">
