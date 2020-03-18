@@ -30,8 +30,9 @@ const Navbar = props => {
 						<Link to="/about">About Us</Link>
 						<Link to="/programs">Our Focus</Link>
 						<Link to="/projects">Projects</Link>
+						<Link to="/contact">Contact Us</Link>
 						<Link to="/contact" className="btn">
-							Contact Us
+							Apply Now
 						</Link>
 					</NavLinks>
 					<BurgerWrapper>
