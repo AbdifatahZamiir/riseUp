@@ -46,7 +46,7 @@ const CollapseMenu = props => {
 						</Link>
 					</li>
 					<li>
-						<Link className="btn" to="/contact" onClick={props.handleNavbar}>
+						<Link className="btn" to="/apply" onClick={props.handleNavbar}>
 							Apply Now
 						</Link>
 					</li>
