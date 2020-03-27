@@ -4,7 +4,7 @@ import Email from "../images/icons/co-email-5.png";
 import Gps from "../images/icons/ui-gps.png";
 import Layout from "../components/layout";
 import Head from "../components/Head";
-import Form from "../components/form";
+import Form from "../components/contactForm";
 
 const Contact = () => {
 	return (

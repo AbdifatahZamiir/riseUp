@@ -4,7 +4,7 @@ import Email from "../images/icons/co-email-5.png";
 import Gps from "../images/icons/ui-gps.png";
 import Layout from "../components/layout";
 import Head from "../components/Head";
-import Form from "../components/form";
+import Form from "../components/contactForm";
 
 const Contact = () => {
 	return (
@@ -49,7 +49,7 @@ const Contact = () => {
 								</a>
 								<br />
 								<a className="nocolor" href="mailto:#">
-									wwww.riseup-et.com 
+									wwww.riseup-et.com
 								</a>
 							</p>
 						</div>

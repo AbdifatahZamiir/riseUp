@@ -4,6 +4,7 @@ import "../styles/style.css";
 import "../styles/purple.css";
 import Logo from "../images/logo.png";
 import { Link } from "gatsby";
+import SubscribeForm from "./subscribeForm";
 
 const Footer = () => {
 	return (
@@ -86,38 +87,7 @@ const Footer = () => {
 							</p>
 							<div className="space10"></div>
 							<div className="newsletter-wrapper">
-								<form
-									method="post"
-									action="https://formspree.io/abdifatahzammiir@gmail.com"
-									id="mc-embedded-subscribe-form"
-									name="mc-embedded-subscribe-form"
-									className="validate"
-									target="_blank"
-								>
-									<div id="mc_embed_signup_scroll" className="input-group">
-										<input
-											type="text"
-											name="_gotcha"
-											style={{ display: `none` }}
-										/>
-										<input
-											type="email"
-											name="_replyto"
-											className="email subscribe-input  form-control mb-0 mr-2 mb-sm-0"
-											id="mce-EMAIL"
-											placeholder="Email Address"
-											required
-										/>
-										<button
-											type="submit"
-											name="subscribe"
-											id="mc-embedded-subscribe"
-											className="btn btn-default mr-0 mb-0 pull-right"
-										>
-											Join
-										</button>
-									</div>
-								</form>
+								<SubscribeForm />
 							</div>
 						</div>
 					</div>
