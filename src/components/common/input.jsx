@@ -1,8 +1,10 @@
 import React from "react";
 
-const Input = ({ name, error, ...rest }) => {
+const Input = ({ name, label, error, ...rest }) => {
 	return (
 		<div className="form-group">
+			{" "}
+			<label htmlFor={name}>{label}</label>
 			<input
 				style={{ backgroundColor: `#fff` }}
 				id={name}

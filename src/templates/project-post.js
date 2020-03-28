@@ -4,6 +4,7 @@ import Img from "gatsby-image";
 import Popular from "../components/popularPost";
 import { graphql } from "gatsby";
 import Head from "../components/Head";
+import ExpansionPanel from "../components/expansion";
 
 export const EventTemplate = ({ data }) => {
 	return (
@@ -45,6 +46,7 @@ export const EventTemplate = ({ data }) => {
 										<h2 className="post-title">{data.frontmatter.title}</h2>
 										<div dangerouslySetInnerHTML={{ __html: data.html }} />
 									</div>
+									<ExpansionPanel title={data.frontmatter.title} />
 								</div>
 							</div>
 						</div>

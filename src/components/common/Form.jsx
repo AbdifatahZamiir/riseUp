@@ -3,6 +3,7 @@ import Joi from "joi-browser";
 import Input from "./input";
 import Select from "./select";
 import TextArea from "./textArea";
+import Checkbox from "./Checkbox";
 
 class Form extends Component {
 	state = {
@@ -25,6 +26,14 @@ class Form extends Component {
 		const { error } = Joi.validate(obj, schema);
 		return error ? error.details[0].message : null;
 	};
+
+	handleCheckbox = () => {
+		const data = { ...this.state.data };
+		data.completed = !data.completed;
+
+		this.setState({ data });
+	};
+
 	handleOnchange = ({ currentTarget: input }) => {
 		const errors = { ...this.state.errors };
 		const errorMessage = this.validateProperty(input);
@@ -43,7 +52,7 @@ class Form extends Component {
 		this.doSubmit();
 	};
 
-	renderInput(name, placeholder, type, classess) {
+	renderInput(name, label, type, classess) {
 		const { data, errors } = this.state;
 
 		return (
@@ -53,12 +62,12 @@ class Form extends Component {
 				onChange={this.handleOnchange}
 				error={errors[name]}
 				type={type}
-				placeholder={placeholder}
+				label={label}
 				className={classess}
 			/>
 		);
 	}
-	renderTextArea(name, placeholder) {
+	renderTextArea(name, label) {
 		const { data } = this.state;
 
 		return (
@@ -66,7 +75,18 @@ class Form extends Component {
 				name={name}
 				value={data[name]}
 				onChange={this.handleOnchange}
-				placeholder={placeholder}
+				label={label}
+			/>
+		);
+	}
+	renderCheckbox(label, type) {
+		const { data } = this.state;
+		return (
+			<Checkbox
+				type={type}
+				defaultChecked={data.completed}
+				onChange={this.handleCheckbox}
+				label={label}
 			/>
 		);
 	}
