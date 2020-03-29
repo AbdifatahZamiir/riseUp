@@ -13,7 +13,6 @@ import {
 class ApplyForm extends Form {
 	state = {
 		data: {
-			applicantinfo: "",
 			fullname: "",
 			mobile: "",
 			email: "",
@@ -21,7 +20,6 @@ class ApplyForm extends Form {
 			ageId: "",
 			educationLevelId: "",
 			location: "",
-			businessidea: "",
 			aboutyourbusiness: "",
 			keycustomer: "",
 			definecustomer: "",
@@ -30,7 +28,6 @@ class ApplyForm extends Form {
 			capital: "",
 			sectorId: "",
 			sustainability: "",
-			motivation: "",
 			whatmotivateyou: "",
 			hearaboutus: "",
 			confirm: "",
@@ -60,7 +57,6 @@ class ApplyForm extends Form {
 	}
 
 	schema = {
-		applicantinfo: Joi.string().label("Applicant information"),
 		fullname: Joi.string()
 			.required()
 			.label("Full Name"),
@@ -83,9 +79,7 @@ class ApplyForm extends Form {
 		location: Joi.string()
 			.required()
 			.label("Location"),
-		businessidea: Joi.string()
-			.required()
-			.label("Business Idea"),
+
 		aboutyourbusiness: Joi.string().label(
 			"Tell us about your business idea (not more than 500 words) Tell us about what the idea/project is about, who is the target and the impact?"
 		),
@@ -112,9 +106,6 @@ class ApplyForm extends Form {
 		sustainability: Joi.string()
 			.required()
 			.label("How is the sustainability of your business idea? "),
-		motivation: Joi.string()
-			.required()
-			.label("Motivation"),
 		whatmotivateyou: Joi.string()
 			.required()
 			.label(
@@ -147,22 +138,12 @@ class ApplyForm extends Form {
 									<div className="form-row">
 										<div className="col-md-6">
 											{this.renderInput(
-												"applicantinfo",
-												"Applicant Information(optional)",
-												"text",
-												"form-control"
-											)}
-										</div>
-										<div className="col-md-6">
-											{this.renderInput(
 												"fullname",
 												"Full Name *",
 												"text",
 												"form-control"
 											)}
 										</div>
-									</div>
-									<div className="form-row">
 										<div className="col-md-6">
 											{this.renderInput(
 												"mobile",
@@ -171,6 +152,8 @@ class ApplyForm extends Form {
 												"form-control"
 											)}
 										</div>
+									</div>
+									<div className="form-row">
 										<div className="col-md-6">
 											{this.renderInput(
 												"email",
@@ -186,6 +169,8 @@ class ApplyForm extends Form {
 												this.state.gender
 											)}
 										</div>
+									</div>
+									<div className="form-row">
 										<div className="col-md-6">
 											{this.renderSelect("ageId", "Age", this.state.ages)}
 										</div>
@@ -196,7 +181,10 @@ class ApplyForm extends Form {
 												this.state.educationLevel
 											)}
 										</div>
-										<div className="col-md-6">
+									</div>
+									<div className="form-row">
+										{" "}
+										<div className="col-md-12">
 											{this.renderInput(
 												"location",
 												"Location *",
@@ -205,13 +193,8 @@ class ApplyForm extends Form {
 											)}
 										</div>
 									</div>
+
 									<div className="form-row">
-										<div className="col-md-12">
-											{this.renderTextArea(
-												"businessidea",
-												"Please provide a brief description of your business or idea. *"
-											)}
-										</div>
 										<div className="col-md-12">
 											{this.renderTextArea(
 												"aboutyourbusiness",
@@ -264,12 +247,6 @@ class ApplyForm extends Form {
 												"How is the sustainability of your business idea?  *",
 												"text",
 												"form-control"
-											)}
-										</div>
-										<div className="col-md-12">
-											{this.renderTextArea(
-												"motivation",
-												"Motivation(optional) "
 											)}
 										</div>
 										<div className="col-md-12">
