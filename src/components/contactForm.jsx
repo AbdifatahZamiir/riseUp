@@ -42,7 +42,7 @@ class ContactForm extends Form {
 		const GOOGLE_FORM_MESSAGE_ID = "entry.60582870";
 		const GOOGLE_FORM_ACTION_URL =
 			"https://docs.google.com/forms/u/0/d/e/1FAIpQLScIxK8iNrxXx2a1tPFoG-VFAEYHFc1U06r_1f-ZwT_M1doXsw/formResponse";
-		const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
+		// const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
 
 		const formData = new FormData();
 		const { firstname, lastname, email, number, message } = this.state.data;
@@ -55,9 +55,7 @@ class ContactForm extends Form {
 		console.log(firstname);
 
 		try {
-			await http.post(CORS_PROXY, GOOGLE_FORM_ACTION_URL, formData);
-console.log("completed")
-		
+			await http.post(GOOGLE_FORM_ACTION_URL, formData);
 		} catch (ex) {
 			if (ex.response && ex.response.status === 404)
 				alert("something goes wrong");
