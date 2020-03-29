@@ -45,8 +45,9 @@ export const EventTemplate = ({ data }) => {
 										</figure>
 										<h2 className="post-title">{data.frontmatter.title}</h2>
 										<div dangerouslySetInnerHTML={{ __html: data.html }} />
+									    <ExpansionPanel title={data.frontmatter.title} />
 									</div>
-									<ExpansionPanel title={data.frontmatter.title} />
+
 								</div>
 							</div>
 						</div>

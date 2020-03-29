@@ -1,7 +1,8 @@
 import React from "react";
 import Joi from "joi-browser";
 import Form from "./common/Form";
-
+import http from "../utils/httpServices";
+import {toast} from 'react-toastify'
 class SubscribeForm extends Form {
 	state = {
 		data: {
@@ -15,19 +16,35 @@ class SubscribeForm extends Form {
 			.required()
 	};
 
-	doSubmit = () => {
+	doSubmit = async () => {
 		// Call server
-		console.log("Submitted");
-	};
+		const GOOGLE_FORM_EMAIL_ID = "emailAddress";
+		const GOOGLE_FORM_ACTION_URL =
+			"https://docs.google.com/forms/u/0/d/e/1FAIpQLSc_XxRbeTgN8nxP79qCO6iQOfrbfLmWTNbNvLmKAEL0izYHBA/formResponse";
+		const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
+			const formData = new FormData();
+			const { email } = this.state.data;
+			formData.append(GOOGLE_FORM_EMAIL_ID, email);
+			try {
+				await http.post(`${CORS_PROXY}${GOOGLE_FORM_ACTION_URL}`, formData);
+				toast.success("Subscribed successfully");
+				this.setState({
+					data: {
+						email: "",
+					},
+				
+			 });
+			} catch (ex) {
+				if (ex.response && ex.response.status === 404)
+					alert("something goes wrong");
+			}
+		};
 	render() {
 		return (
 			<form
-				method="post"
-				action=""
-				id="mc-embedded-subscribe-form"
-				name="mc-embedded-subscribe-form"
+				onSubmit={this.handleSubmit}
 				className="validate"
-				target="_blank"
+
 			>
 				<div id="mc_embed_signup_scroll" className="input-group row">
 					<div className="col-lg-9 col-md-9 col-sm-9 pr-4">

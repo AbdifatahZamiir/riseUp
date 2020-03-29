@@ -9,6 +9,8 @@ import About from "../components/about";
 import Head from "../components/Head";
 import LatestProject from "../components/latestProjects";
 
+import { ToastContainer } from "react-toastify";
+
 export const IndexPageTemplate = ({
 	mainTitle,
 	subTitle,
@@ -17,6 +19,7 @@ export const IndexPageTemplate = ({
 	partnerTitle
 }) => (
 	<Fragment>
+		<ToastContainer />
 		<Head title="Rise Up" />
 		<SlideShow mainTitle={mainTitle} subTitle={subTitle} />
 		<About />
