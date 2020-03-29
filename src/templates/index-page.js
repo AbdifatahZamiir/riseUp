@@ -8,7 +8,7 @@ import Slider from "../components/slider";
 import About from "../components/about";
 import Head from "../components/Head";
 import LatestProject from "../components/latestProjects";
-
+import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 
 export const IndexPageTemplate = ({
@@ -19,7 +19,7 @@ export const IndexPageTemplate = ({
 	partnerTitle
 }) => (
 	<Fragment>
-		<ToastContainer />
+
 		<Head title="Rise Up" />
 		<SlideShow mainTitle={mainTitle} subTitle={subTitle} />
 		<About />
@@ -34,6 +34,7 @@ const IndexPost = ({ data }) => {
 	const { frontmatter } = data.markdownRemark;
 	return (
 		<Layout>
+		    <ToastContainer />
 			<Head title={frontmatter.mainTitle} />
 			<IndexPageTemplate
 				mainTitle={frontmatter.mainTitle}

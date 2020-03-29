@@ -1,8 +1,9 @@
-import React from "react";
+import React,{ Fragment }  from "react";
 import Joi from "joi-browser";
 import Form from "./common/Form";
 import http from "../utils/httpServices";
-import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer,toast } from "react-toastify";
 
 class ContactForm extends Form {
 	state = {
@@ -55,7 +56,9 @@ class ContactForm extends Form {
 
 		try {
 			await http.post(`${CORS_PROXY}${GOOGLE_FORM_ACTION_URL}`, formData);
-			toast.success("Submitted successfully, thanks");
+            toast.success("Submitted successfully, thanks", {
+                position: toast.POSITION.TOP_CENTER
+            });
 			this.setState({
 				data: {
 					firstname: "",
@@ -72,7 +75,9 @@ class ContactForm extends Form {
 	};
 	render() {
 		return (
-			<div className="wrapper light-wrapper">
+            <Fragment>
+    		    <ToastContainer />
+			    <div className="wrapper light-wrapper">
 				<div className="container inner">
 					<div className="row">
 						<div className="col-md-12 col-lg-12 ">
@@ -137,6 +142,7 @@ class ContactForm extends Form {
 					</div>
 				</div>
 			</div>
+        </Fragment>
 		);
 	}
 }
