@@ -67,7 +67,7 @@ class Form extends Component {
 			/>
 		);
 	}
-	renderTextArea(name, label) {
+	renderTextArea(name, placeholder) {
 		const { data } = this.state;
 
 		return (
@@ -75,7 +75,7 @@ class Form extends Component {
 				name={name}
 				value={data[name]}
 				onChange={this.handleOnchange}
-				label={label}
+				placeholder={placeholder}
 			/>
 		);
 	}

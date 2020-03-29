@@ -1,6 +1,7 @@
 import React from "react";
 import Joi from "joi-browser";
 import Form from "./common/Form";
+import http from "../utils/httpServices";
 
 class ContactForm extends Form {
 	state = {
@@ -31,9 +32,36 @@ class ContactForm extends Form {
 		message: Joi.string().label("Message")
 	};
 
-	doSubmit = () => {
+	doSubmit = async () => {
 		// Call server
 		console.log("Submitted");
+		const GOOGLE_FORM_FIRSTNAME_ID = "entry.1359825617";
+		const GOOGLE_FORM_LASTNAME_ID = "entry.773801231";
+		const GOOGLE_FORM_EMAIL_ID = "emailAddress";
+		const GOOGLE_FORM_NUMBER_ID = "entry.434388944";
+		const GOOGLE_FORM_MESSAGE_ID = "entry.60582870";
+		const GOOGLE_FORM_ACTION_URL =
+			"https://docs.google.com/forms/u/0/d/e/1FAIpQLScIxK8iNrxXx2a1tPFoG-VFAEYHFc1U06r_1f-ZwT_M1doXsw/formResponse";
+		const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
+
+		const formData = new FormData();
+		const { firstname, lastname, email, number, message } = this.state.data;
+		formData.append(GOOGLE_FORM_FIRSTNAME_ID, firstname);
+		formData.append(GOOGLE_FORM_LASTNAME_ID, lastname);
+		formData.append(GOOGLE_FORM_EMAIL_ID, email);
+		formData.append(GOOGLE_FORM_NUMBER_ID, number);
+		formData.append(GOOGLE_FORM_MESSAGE_ID, message);
+
+		console.log(firstname);
+
+		try {
+			await http.post(CORS_PROXY, GOOGLE_FORM_ACTION_URL, formData);
+console.log("completed")
+		
+		} catch (ex) {
+			if (ex.response && ex.response.status === 404)
+				alert("something goes wrong");
+		}
 	};
 	render() {
 		return (
@@ -42,7 +70,7 @@ class ContactForm extends Form {
 					<div className="row">
 						<div className="col-md-12 col-lg-12 ">
 							<h2 className="section-title text-center pb-5">Drop Us a Line</h2>
-							<form id="contact-form">
+							<form onSubmit={this.handleSubmit} id="contact-form">
 								<div className="messages"></div>
 								<div className="controls">
 									<div className="form-row">
