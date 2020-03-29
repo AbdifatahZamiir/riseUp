@@ -52,7 +52,7 @@ class Form extends Component {
 		this.doSubmit();
 	};
 
-	renderInput(name, label, type, classess) {
+	renderInput(name, placeholder, type, classess) {
 		const { data, errors } = this.state;
 
 		return (
@@ -62,7 +62,7 @@ class Form extends Component {
 				onChange={this.handleOnchange}
 				error={errors[name]}
 				type={type}
-				label={label}
+				placeholder={placeholder}
 				className={classess}
 			/>
 		);
