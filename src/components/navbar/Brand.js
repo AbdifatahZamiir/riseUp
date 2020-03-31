@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "gatsby";
 
 import Logo from "../../images/logo.png";
 
 const Brand = () => {
-	return <Image src={Logo} alt="riseup Logo" />;
+	return <Link to="/"><Image src={Logo} alt="riseup Logo" /></Link>;
 };
 
 export default Brand;
