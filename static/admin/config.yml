@@ -1,0 +1,52 @@
+backend:
+  name: git-gateway
+  branch: master
+  commit_messages:
+    create: "Create {{collection}} “{{slug}}”"
+    update: "Update {{collection}} “{{slug}}”"
+    delete: "Delete {{collection}} “{{slug}}”"
+    uploadMedia: "[skip ci] Upload “{{path}}”"
+    deleteMedia: "[skip ci] Delete “{{path}}”"
+
+media_folder: static/images
+public_folder: /images
+
+collections:
+  - name: "programs"
+    label: "Programs"
+    folder: "src/pages/programs"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "services",
+        }
+      - { name: publishedDate, label: Date, widget: datetime, required: true }
+      - { name: title, label: Title, widget: "string", required: true }
+      - { name: image, label: Image, widget: image, required: true }
+      - { name: body, label: Body, widget: markdown, required: true }
+
+  - name: "teams"
+    label: "Team"
+    folder: "src/pages/programs"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "teams",
+        }
+      - { name: title, label: Title, widget: "string", required: true }
+      - { name: status, label: Status, widget: "string", required: true }
+      - {
+          name: description,
+          label: Description,
+          widget: "text",
+          required: true,
+        }
+      - { name: image, label: Image, widget: image, required: true }

@@ -5,8 +5,3 @@ description: Our tech startup accelerator is designed to harness the power of te
 featuredImg: "../assets/tech.jpg"
 publishedDate: 2020-07-01T22:12:03.284Z
 ---
-
-
-
-
-

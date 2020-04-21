@@ -43,8 +43,8 @@ exports.createPages = async ({ graphql, actions }) => {
 			),
 			// additional data can be passed via context
 			context: {
-				slug: node.fields.slug
-			}
+				slug: node.fields.slug,
+			},
 		});
 	});
 };
@@ -57,7 +57,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 		createNodeField({
 			name: `slug`,
 			node,
-			value
+			value,
 		});
 	}
 };
