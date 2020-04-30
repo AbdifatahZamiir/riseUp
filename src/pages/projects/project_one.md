@@ -2,7 +2,7 @@
 templateKey: project-post
 title: Business Innovation Week
 description: Innovation Week to support and celebrate businesses that are already innovating and disrupting their respictive marekts with new aproaches
-featuredImg: "../assets/b4.jpg"
+featuredImg: "../../images/b4.jpg"
 publishedDate: 2020-09-01T22:12:03.284Z
 ---
 

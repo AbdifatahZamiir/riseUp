@@ -1,7 +1,7 @@
 ---
 templateKey: teams
-title: Ali Ahmed
-status: Co-founder
-featuredImg: ../assets/t1.jpg
+title: Abdishakuur Cilmi
+status: Admin & Finance
+featuredImg: ../../images/t3.jpg
 description: Pellentesque ornare sem lacinia quam venenatis.
 ---

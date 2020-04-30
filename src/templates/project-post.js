@@ -1,6 +1,5 @@
 import React, { Fragment } from "react";
 import Layout from "../components/layout";
-import Img from "gatsby-image";
 import Popular from "../components/popularPost";
 import { graphql } from "gatsby";
 import Head from "../components/Head";
@@ -26,28 +25,16 @@ export const EventTemplate = ({ data }) => {
 								<div className="row isotope">
 									<div className="item post grid-sizer col-md-8 col-lg-12">
 										<figure className="overlay overlay1 rounded mb-3">
-											{!!data.frontmatter.featuredImg &&
-											!!data.frontmatter.featuredImg.childImageSharp ? (
-												<Img
-													style={{ width: "100%", height: "300px" }}
-													fluid={
-														data.frontmatter.featuredImg.childImageSharp.fluid
-													}
-													alt={data.frontmatter.title}
-												/>
-											) : (
-												<img
-													style={{ width: "100%", height: "300px" }}
-													src={data.frontmatter.featuredImg.publicURL}
-													alt={data.frontmatter.title}
-												/>
-											)}
+											<img
+												style={{ width: "100%", height: "300px" }}
+												src={data.frontmatter.featuredImg.publicURL}
+												alt={data.frontmatter.title}
+											/>
 										</figure>
 										<h2 className="post-title">{data.frontmatter.title}</h2>
 										<div dangerouslySetInnerHTML={{ __html: data.html }} />
-									    <ExpansionPanel title={data.frontmatter.title} />
+										<ExpansionPanel title={data.frontmatter.title} />
 									</div>
-
 								</div>
 							</div>
 						</div>
@@ -60,7 +47,7 @@ export const EventTemplate = ({ data }) => {
 		</Fragment>
 	);
 };
-const EventPost = props => {
+const EventPost = (props) => {
 	return (
 		<Layout>
 			{/* <Head title={markdownRemark.frontmatter.title} /> */}

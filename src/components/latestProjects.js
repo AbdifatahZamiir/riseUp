@@ -1,6 +1,5 @@
 import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
-import Img from "gatsby-image";
 import { FaClock } from "react-icons/fa";
 
 const LatestProject = () => {
@@ -54,19 +53,11 @@ const LatestProject = () => {
 							<div className="item post grid-sizer col-md-4 col-lg-4" key={id}>
 								<figure className="overlay overlay1 rounded mb-3">
 									<Link to={slug}>
-										{!!featuredImg && !!featuredImg.childImageSharp ? (
-											<Img
-												style={{ width: "100%", height: "300px" }}
-												fluid={featuredImg.childImageSharp.fluid}
-												alt={title}
-											/>
-										) : (
-											<img
-												style={{ width: "100%", height: "300px" }}
-												src={featuredImg.publicURL}
-												alt={title}
-											/>
-										)}
+										<img
+											style={{ width: "100%", height: "300px" }}
+											src={featuredImg.publicURL}
+											alt={title}
+										/>
 									</Link>
 									<figcaption>
 										<h5 className="from-top mb-0">Read More</h5>

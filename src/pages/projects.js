@@ -3,7 +3,6 @@ import { graphql, Link } from "gatsby";
 import { paginate } from "../utils/paginate";
 import Layout from "../components/layout";
 import Pagination from "../components/pagination";
-import Img from "gatsby-image";
 import { FaClock, FaSearch } from "react-icons/fa";
 import Head from "../components/Head";
 import Popular from "../components/popularPost";
@@ -13,17 +12,17 @@ class Projects extends Component {
 		posts: [],
 		pageSize: 4,
 		currentPage: 1,
-		searchQuery: ""
+		searchQuery: "",
 	};
 
 	componentDidMount() {
 		const { data } = this.props;
 		this.setState({ posts: data.allMarkdownRemark.edges });
 	}
-	handleSearch = query => {
+	handleSearch = (query) => {
 		this.setState({ searchQuery: query, currentPage: 1 });
 	};
-	handlePageChange = page => {
+	handlePageChange = (page) => {
 		this.setState({ currentPage: page });
 	};
 
@@ -32,7 +31,7 @@ class Projects extends Component {
 
 		let filtered = allPosts;
 		if (searchQuery)
-			filtered = allPosts.filter(post =>
+			filtered = allPosts.filter((post) =>
 				post.node.frontmatter.title
 					.toLowerCase()
 					.includes(searchQuery.toLowerCase())
@@ -70,26 +69,17 @@ class Projects extends Component {
 												featuredImg,
 												title,
 												description,
-												publishedDate
+												publishedDate,
 											} = node.frontmatter;
 											return (
 												<div className="item post grid-sizer col-md-6" key={id}>
 													<figure className="overlay overlay1 rounded mb-3">
 														<Link to={slug}>
-															{!!featuredImg &&
-															!!featuredImg.childImageSharp ? (
-																<Img
-																	style={{ width: "100%", height: "300px" }}
-																	fluid={featuredImg.childImageSharp.fluid}
-																	alt={title}
-																/>
-															) : (
-																<img
-																	style={{ width: "100%", height: "300px" }}
-																	src={featuredImg.publicURL}
-																	alt={title}
-																/>
-															)}
+															<img
+																style={{ width: "100%", height: "300px" }}
+																src={featuredImg.publicURL}
+																alt={title}
+															/>
 														</Link>
 														<figcaption>
 															<h5 className="from-top mb-0">Read More</h5>
@@ -138,7 +128,7 @@ class Projects extends Component {
 												size="18px"
 												color="#d8681d"
 												style={{
-													cursor: `pointer`
+													cursor: `pointer`,
 												}}
 											/>
 										</span>
@@ -148,7 +138,7 @@ class Projects extends Component {
 											type="text"
 											value={searchQuery}
 											placeholder="Search..."
-											onChange={e => this.handleSearch(e.currentTarget.value)}
+											onChange={(e) => this.handleSearch(e.currentTarget.value)}
 										/>
 									</div>
 								</div>

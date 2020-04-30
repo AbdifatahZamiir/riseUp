@@ -12,9 +12,9 @@ media_folder: static/images
 public_folder: /images
 
 collections:
-  - name: "programs"
-    label: "Programs"
-    folder: "src/pages/programs"
+  - name: "projects"
+    label: "Projects"
+    folder: "src/pages/projects"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
@@ -22,16 +22,22 @@ collections:
           label: "Template Key",
           name: "templateKey",
           widget: "hidden",
-          default: "services",
+          default: "project-post",
         }
       - { name: publishedDate, label: Date, widget: datetime, required: true }
+      - {
+          name: description,
+          label: Description,
+          widget: "text",
+          required: true,
+        }
       - { name: title, label: Title, widget: "string", required: true }
       - { name: image, label: Image, widget: image, required: true }
       - { name: body, label: Body, widget: markdown, required: true }
 
   - name: "teams"
     label: "Team"
-    folder: "src/pages/programs"
+    folder: "src/pages/teams"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
